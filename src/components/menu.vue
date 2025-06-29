@@ -27,43 +27,11 @@ import Mm from './mainMenu.vue'
 
 <style scoped>
 
-
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .container {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .logo {
-    height: 70px;
-    margin: 0 auto;
-  }
-
-  .search {
-    width: 80%;
-    margin: 10px auto;
-  }
-
-  #searchLogo {
-    margin-left: -30px;
-  }
-
-  .category,
-  .user,
-  .sr,
-  .favoriteLogo {
-    margin-top: 5px;
-    font-size: 14px;
-  }
-
-  .bag {
-    margin-left: 25px;
-    margin-top: -20px;
+    flex-direction: column;
   }
 }
-
-
 
 
 
