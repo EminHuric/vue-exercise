@@ -12,6 +12,27 @@
 </template>
 
 <style scoped>
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .email,
+    .t,
+    .tt {
+        display: none;
+    }
+    .wP {
+        text-align: center;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+ 
+}
+
+@media (max-width: 480px) {
+  
+}
+
+
 .tt {
     margin-left: 10px;
     margin-top: 13px;

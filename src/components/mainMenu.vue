@@ -30,27 +30,68 @@
         </div>
     </div>
     <div class="main-menu ">
-        <a href="index.html">HOME</a>
-        <a href="#">SHOP</a>
-        <a href="#">CONTACT</a>
-        <a href="#">CATALOG</a>
-        <a href="#" style="margin-left: 16%;">FAMILY CARD DISCOUNT</a>
+        <a href="index.html">
+            <span class="menu-item">HOME</span>
+        </a>
+        <a href="#">
+            <span class="menu-item">SHOP</span>
+        </a>
+         <a href="#">
+            <span class="menu-item">CONTACT</span>
+        </a>
+         <a href="#">
+            <span class="menu-item">CATALOG</span>
+        </a>
+         <a href="#">
+            <span class="fcd">FAMILY CARD DISCOUNT</span>
+        </a>
     </div>
 </template>
 
 <style scoped>
-.main-menu a {
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mm {
+        display: none;
+    }
+    .main-menu a {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+ 
+}
+
+@media (max-width: 480px) {
+  
+}
+
+
+
+.fcd {
+    margin-left: 390px;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+.menu-item {
     margin-left: 25px;
     font-size: 13px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
 }
+.main-menu a {
+    text-decoration: none;
+}
 .main-menu {
-    margin-top: 150px;
+    margin-top: 4px;
     position: absolute;
-    margin-left: 37.4%;
-    width: 100%;
+    display: flex;
+    left: 37.4%;
+    width: 1000%;
 }
 .categoriesButton:hover~.categories,
 .categories:hover {

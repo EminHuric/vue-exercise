@@ -1,8 +1,25 @@
 <template>
   <Welcome />
   <nav class="menu">
+    <div class="menuS">
+      <button class="menuBar" @click="showMenu"><i class="fa-solid fa-bars"></i></button>
+      <div v-if="menu2" class="overlay" @click.self="menu2 = false">
+        <div class="menu2">
+          <ul>
+            <a href="#">home</a><br>
+            <a href="#">home</a><br>
+            <a href="#">home</a><br>
+            <a href="#">home</a>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="container">
+
+
       <img class="logo" src="/logo1.png" alt="logo">
+
+      <div class="bagT"><i class="fa-solid fa-bag-shopping"></i></div>
 
       <input placeholder="Search products" class="search">
       <button id="searchLogo"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -13,25 +30,111 @@
       <p class="sr">SIGN IN / REGISTER</p>
       <div class="favoriteLogo"><i class="far fa-heart"></i>
         <div class="bag"><i class="fa-solid fa-bag-shopping"></i></div>
-        </div>
+      </div>
     </div>
   </nav>
   <Mm />
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import Welcome from './welcome.vue'
 import Mm from './mainMenu.vue'
 
+const menu2 = ref(false)
+function showMenu() {
+  menu2.value = !menu2.value
+}
 </script>
 
 <style scoped>
+.bagT {
+  display: none;
+}
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+.menu2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: rgba(255, 255, 255);
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.menuS {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bagT {
+    display: block;
+    font-size: 20px;
+    margin-top: -25px;
+    position: absolute;
+    right: 15px;
+  }
+
+  .menuBar {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+  }
+
+  nav.menu {
+    border: 1px solid rgb(221, 221, 221);
+    height: 55px;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 45px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  nav.menu .logo {
+    height: 130px;
+    width: 121px;
+    margin-top: -75px;
+    margin-left: 42%;
+  }
+
+  .search,
+  #searchLogo,
+  .category,
+  .user,
+  .sr,
+  .favoriteLogo,
+  .bag {
+    display: none;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .menuS {
+    display: block;
   }
 }
+
+@media (min-width: 481px) and (max-width: 767px) {}
+
+@media (max-width: 480px) {}
 
 
 
@@ -43,27 +146,32 @@ import Mm from './mainMenu.vue'
   margin-top: -27px;
   margin-left: 40px;
 }
+
 .favoriteLogo {
   color: rgb(0, 0, 0);
   font-size: 20px;
   margin-top: 38px;
   margin-left: 40px;
 }
+
 .sr {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 42px;
   margin-left: 10px;
 }
+
 .user {
   margin-left: 90px;
   color: black;
   font-size: 24px;
   margin-top: 38px;
 }
+
 .category p i {
   margin-left: 26px;
 }
+
 .category p {
   margin-top: 11px;
   margin-left: 10px;
@@ -71,6 +179,7 @@ import Mm from './mainMenu.vue'
   color: #818181;
   font-size: 15px;
 }
+
 .category {
   border: 1px solid rgb(221, 221, 221);
   background-color: white;

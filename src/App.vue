@@ -1,34 +1,21 @@
 <script setup>
 import { ref, resolveDirective } from 'vue'
 import Men from './components/menu.vue'
-import More from './components/more.vue'
+
 import products from './components/products.vue'
 
-
 const activePage = ref('home')
-const search = ref('')
 
-function setPage(pageName) {
-  activePage.value = pageName
-}
+
 
 </script>
 
 <template>
-  <Men />
-  <div v-if="activePage === 'home'">
-    <button @click="setPage('more')" class="more">More</button>
-
+  <Men />  
     <div class="card">
       <h2 style="font-size: 70px; text-align: center; ">Products</h2>
       <products />
     </div>
-
-  </div>
-  <More v-if="activePage === 'more'" />
-
-
-
 </template>
 
 <style scoped>
