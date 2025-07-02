@@ -3,32 +3,43 @@
   <nav class="menu">
     <div class="menuS">
       <button class="menuBar" @click="showMenu"><i class="fa-solid fa-bars"></i></button>
-      <div v-if="menu2" class="overlay" @click.self="menu2 = false">
-        <div class="menu2">
-          <ul>
-            <a href="#">home</a><br>
-            <a href="#">home</a><br>
-            <a href="#">home</a><br>
-            <a href="#">home</a>
+      <div v-if="menu2" class="overlay" @click="menu2 = false">
+        <div class="menu2" @click.stop>
+          <div class="search-bar">
+            <input type="text" placeholder="Search product" />
+            <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="mc">
+            <div class="m">MENU</div>
+            <div class="b">CATEGORIES</div>
+          </div>
+          <ul class="menuItem">
+            <li><a href="index.html" class="m1">HOME</a></li><br>
+            <li><router-link to="/shop" class="m2">SHOP</router-link></li>
+            <li><router-link to="/family-card" class="m3">FAMILY CARD</router-link></li>
+            <li><router-link to="/contact" class="m4">CONTACT</router-link></li>
+            <li><router-link to="/catalog" class="m5">CATALOG</router-link></li>
+            <li><router-link to="/favorite" class="m5">FAVORITE</router-link></li>
+            <li><router-link to="/login" class="m6">LOG IN / SIGN UP</router-link></li>
           </ul>
         </div>
       </div>
     </div>
+
     <div class="container">
-
-
-      <img class="logo" src="/logo1.png" alt="logo">
+      <img class="logo" src="/logo1.png" alt="logo" />
 
       <div class="bagT"><i class="fa-solid fa-bag-shopping"></i></div>
 
-      <input placeholder="Search products" class="search">
+      <input placeholder="Search products" class="search" />
       <button id="searchLogo"><i class="fa-solid fa-magnifying-glass"></i></button>
       <div class="category">
         <p>CATEGORY <i class="fa-duotone fa-solid fa-chevron-down"></i></p>
       </div>
       <p class="user"><i class="fa-regular fa-user"></i></p>
       <p class="sr">SIGN IN / REGISTER</p>
-      <div class="favoriteLogo"><i class="far fa-heart"></i>
+      <div class="favoriteLogo">
+        <i class="far fa-heart"></i>
         <div class="bag"><i class="fa-solid fa-bag-shopping"></i></div>
       </div>
     </div>
@@ -48,6 +59,148 @@ function showMenu() {
 </script>
 
 <style scoped>
+.m6 {
+  display: inline-block;
+  border: 1px solid #dad8d8;
+  padding: 16px 30px;
+  color: #333;
+  border-top: none;
+  padding-right: 57.5%;
+  border-right: none;
+  margin-left: -50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left: none;
+}
+.m5 {
+  display: inline-block;
+  border: 1px solid #dad8d8;
+  padding: 16px 30px;
+  color: #333;
+  border-top: none;
+  padding-right: 79.5%;
+  border-right: none;
+  margin-left: -50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left: none;
+}
+.m4 {
+  display: inline-block;
+  border: 1px solid #dad8d8;
+  padding: 16px 30px;
+  color: #333;
+  margin-top: -5px;
+  padding-right: 79%;
+  border-right: none;
+  margin-left: -50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left: none;
+}
+.m3 {
+  display: inline-block;
+  border: 1px solid #dad8d8;
+  padding: 18px 30px;
+  color: #333;
+  margin-top: -5px;
+  border-bottom: none;
+  border-right: none;
+  margin-left: -50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left: none;
+  border-top: none;
+}
+.m2 {
+  display: inline-block;
+  border: 1px solid #dad8d8;
+  padding: 15px 30px;
+  color: #333;
+  margin-top: -5px;
+  padding-right: 90.5%;
+  border-right: none;
+  margin-left: -50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left: none;
+  border-top: none;
+}
+
+.m1 {
+  border: 1px solid #dad8d8;
+  padding: 15px 30px;
+  padding-right: 89.5%;
+  margin-left: -50px;
+  color: #333;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+.menuItem a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.m,
+.b {
+  border: 1px solid #d4d3d3;
+  background-color: rgb(243, 241, 241);
+  width: 152.7px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 22px;
+  text-align: center;
+  border-top: none;
+  border-right: none;
+}
+
+.mc {
+  border: 1px solid #dad8d8;
+  height: 60px;
+  margin-top: 70px;
+  display: flex;
+  width: 307px;
+  margin-left: 0px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.search-bar input::placeholder {
+  font-weight: bold;
+  color: #999;
+}
+
+.searchButton {
+  margin-left: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #818181;
+}
+
+.menuItem {
+  margin-top: 15px;
+  list-style: none;
+}
+
+.search-bar input {
+  width: 230px;
+  height: 50px;
+  color: #818181;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  padding-left: 20px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.search-bar {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  display: flex;
+}
+
 .bagT {
   display: none;
 }
@@ -70,6 +223,7 @@ function showMenu() {
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1000;
+
 }
 
 .menuS {

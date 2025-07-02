@@ -3,7 +3,7 @@ import { ref, resolveDirective } from 'vue'
 import Men from './components/menu.vue'
 
 import products from './components/products.vue'
-
+import Nav from './components/navBar.vue'
 const activePage = ref('home')
 
 
@@ -16,6 +16,7 @@ const activePage = ref('home')
       <h2 style="font-size: 70px; text-align: center; ">Products</h2>
       <products />
     </div>
+    <Nav />
 </template>
 
 <style scoped>
