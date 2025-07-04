@@ -55,10 +55,13 @@
 <style >
 @media (min-width: 1921px) and (max-width: 3025px) {
   .categoriesButton {
-    transform: translateX(20px) !important;
+    transform: translateX(0px) !important;
   }
   .main-menu {
-    transform: translateX(60px) !important;
+    transform: translateX(0px) !important;
+  }
+  .fcd {
+    margin-left: 400px !important;
   }
 }
 

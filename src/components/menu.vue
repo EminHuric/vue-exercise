@@ -45,6 +45,30 @@
     </div>
   </nav>
   <Mm />
+  
+
+  <button class="menuT" style="margin-top: -95px; position: absolute; display: none;" @click="showMenu"><i class="fa-solid fa-bars"></i></button>
+  <div v-if="menu2" class="overlay" @click="menu2 = false">
+        <div class="menu2" @click.stop>
+          <div class="search-bar">
+            <input type="text" placeholder="Search product" />
+            <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="mc">
+            <div class="m">MENU</div>
+            <div class="b">CATEGORIES</div>
+          </div>
+          <ul class="menuItem">
+            <li><a href="index.html" class="m1">HOME</a></li><br>
+            <li><router-link to="/shop" class="m2">SHOP</router-link></li>
+            <li><router-link to="/family-card" class="m3">FAMILY CARD</router-link></li>
+            <li><router-link to="/contact" class="m4">CONTACT</router-link></li>
+            <li><router-link to="/catalog" class="m5">CATALOG</router-link></li>
+            <li><router-link to="/favorite" class="m5">FAVORITE</router-link></li>
+            <li><router-link to="/login" class="m6">LOG IN / SIGN UP</router-link></li>
+          </ul>
+        </div>
+      </div>
 </template>
 
 <script setup>
@@ -60,7 +84,7 @@ function showMenu() {
 
 <style scoped>
 @media (min-width: 1921px) and (max-width: 3025px) {
-  
+
 }
 @media (min-width: 1024px) and (max-width: 1920px) {
   .logo {
@@ -123,19 +147,15 @@ function showMenu() {
   .bag {
     margin-left: 60px !important;
   }
-  .menuBar {
-    margin-top: 15px;
-    margin-left: 10px;
-    font-size: 20px;
+  .menuT {
+    display:  block !important;
     background: none;
-    color: #000000;
     border: none;
-    display: inline-block;
+    font-size: 20px;
   }
-  .menuItem {
-    display: block;
+  .menu2 {
+    width: 79% !important;
   }
-  
 }
 
 
