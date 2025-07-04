@@ -52,7 +52,16 @@
     </div>
 </template>
 
-<style scoped>
+<style >
+@media (min-width: 1921px) and (max-width: 3025px) {
+  .categoriesButton {
+    transform: translateX(20px) !important;
+  }
+  .main-menu {
+    transform: translateX(60px) !important;
+  }
+}
+
 @media (min-width: 1024px) and (max-width: 1920px) {
     .categoriesButton {
         margin-left: 310px !important;
@@ -131,12 +140,15 @@
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {}
+@media (max-width: 420px) {
+    .mm {
+        display: none;
+    }
 
-@media (max-width: 480px) {}
-
-
-
+    .main-menu a {
+        display: none;
+    }
+}
 .fcd {
     margin-left: 390px;
     font-size: 13px;

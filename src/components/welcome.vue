@@ -74,12 +74,21 @@
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
- 
-}
-
-@media (max-width: 480px) {
-  
+@media (max-width: 420px) {
+  .wP {
+    margin-left: 9% !important;
+    margin-right: -100% !important;
+    font-size: 15px !important;
+    text-align: center;
+  }
+  .t,
+  .tt,
+  .email {
+    display: none;
+  }
+  .menuS {
+    height: 15px !important;
+  }
 }
 
 
@@ -132,5 +141,6 @@
     top: 0px;
     font-size: 15px;
     display: flex;
+
 }
 </style>

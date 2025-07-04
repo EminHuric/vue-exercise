@@ -39,7 +39,7 @@
     .navLogo3 {
         position: absolute;
         top: 10px;
-        left: 655px;
+        left: 81.8%;
         font-size: 20px;
         color: #2e2c2c;
     }

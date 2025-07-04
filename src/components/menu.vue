@@ -39,7 +39,7 @@
       <p class="user"><i class="fa-regular fa-user"></i></p>
       <p class="sr">SIGN IN / REGISTER</p>
       <div class="favoriteLogo">
-        <i class="far fa-heart"></i>
+        <span class="fv"><i class="far fa-heart"></i></span>
         <div class="bag"><i class="fa-solid fa-bag-shopping"></i></div>
       </div>
     </div>
@@ -59,6 +59,9 @@ function showMenu() {
 </script>
 
 <style scoped>
+@media (min-width: 1921px) and (max-width: 3025px) {
+  
+}
 @media (min-width: 1024px) and (max-width: 1920px) {
   .logo {
     margin-left: 295px !important;
@@ -99,6 +102,40 @@ function showMenu() {
     margin-left: 10px  !important;
   }
 
+}
+@media (max-width: 420px) {
+  .search,
+  .category,
+  #searchLogo,
+  .user,
+  .sr,
+  .fv {
+    display: none;
+  }
+  .logo {
+    margin-left: 30% !important;
+    height: 125px !important;
+    width: 150px !important;
+  }
+  .menu {
+    height: 50px !important;
+  }
+  .bag {
+    margin-left: 60px !important;
+  }
+  .menuBar {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 20px;
+    background: none;
+    color: #000000;
+    border: none;
+    display: inline-block;
+  }
+  .menuItem {
+    display: block;
+  }
+  
 }
 
 
@@ -329,18 +366,6 @@ function showMenu() {
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {}
-
-@media (max-width: 480px) {
-
-}
-
-
-
-
-
-
-
 .bag {
   margin-top: -27px;
   margin-left: 30px;
@@ -372,7 +397,7 @@ function showMenu() {
 }
 
 .category p {
-  margin-top: 11px;
+  margin-top: -2px;
   margin-left: 10px;
   font-family: Arial, Helvetica, sans-serif;
   color: #818181;
@@ -384,10 +409,10 @@ function showMenu() {
   background-color: white;
   border-top: none;
   border-bottom: none;
-  height: 41px;
+  height: 10px;
   width: 150px;
   margin-top: 29px;
-  margin-left: -185px;
+  margin-left: -215px;
 }
 
 #searchLogo {
