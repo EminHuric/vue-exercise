@@ -59,6 +59,49 @@ function showMenu() {
 </script>
 
 <style scoped>
+@media (min-width: 1024px) and (max-width: 1920px) {
+  .logo {
+    margin-left: 295px !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1709px) {
+  .logo {
+    margin-left: 5px !important;
+  }
+  .user {
+    margin-left: 50px !important;
+  }
+  .sr {
+    font-size: 13px !important;
+    margin-top: 45px !important;
+  }
+  .favoriteLogo {
+    margin-top: 38px !important;
+    font-size: 22px !important;
+    margin-left: 15px !important;
+  }
+  .bag {
+    margin-left: 35px !important;
+  }
+  .search {
+    margin-left: -10px !important;
+  }
+}
+@media (min-width: 1029px) and (max-width: 1709px) {
+  .logo {
+    margin-left: -5px !important;
+  }
+  .user {
+    margin-left: 80px !important;
+  }
+  .search {
+    width: 48% !important;
+    margin-left: 10px  !important;
+  }
+
+}
+
+
 .m6 {
   display: inline-block;
   border: 1px solid #dad8d8;
@@ -288,7 +331,9 @@ function showMenu() {
 
 @media (min-width: 481px) and (max-width: 767px) {}
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+}
 
 
 
@@ -298,14 +343,14 @@ function showMenu() {
 
 .bag {
   margin-top: -27px;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .favoriteLogo {
   color: rgb(0, 0, 0);
   font-size: 20px;
   margin-top: 38px;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .sr {
@@ -373,7 +418,7 @@ function showMenu() {
   height: 180px;
   width: 210px;
   margin-top: -37px;
-  margin-left: 26%;
+  margin-left: 600px;
 }
 
 .menu {

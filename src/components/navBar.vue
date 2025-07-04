@@ -31,6 +31,11 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .navBar {
+        justify-content: center;
+        text-align: center;
+        justify-self:center;
+    }
     .navLogo3 {
         position: absolute;
         top: 10px;
@@ -42,14 +47,14 @@
     .navName3 {
         position: absolute;
         top: 35px;
-        left: 635px;
+        left: 79.7%;
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
         color: #2e2c2c;
 
     }
     .acc {
-        margin-left: 500px;
+        margin-left: 9900px;
     }
     .bag {
         margin-left: 500px;
@@ -57,7 +62,7 @@
     .navLogo2 {
         position: absolute;
         top: 10px;
-        left: 479px;
+        left: 57.3%;
         font-size: 20px;
         color: #2e2c2c;
     }
@@ -65,7 +70,7 @@
     .navName2 {
         position: absolute;
         top: 35px;
-        left: 460px;
+        left: 55%;
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
         color: #2e2c2c;
@@ -74,7 +79,7 @@
     .navLogo1 {
         position: absolute;
         top: 10px;
-        left: 286px;
+        left: 35%;
         font-size: 20px;
         color: #272626;
     }
@@ -82,7 +87,7 @@
     .navName1 {
         position: absolute;
         top: 35px;
-        left: 270px;
+        left: 33%;
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
         color: #2e2c2c;
@@ -91,7 +96,7 @@
     .navLogo {
         position: absolute;
         top: 10px;
-        left: 87px;
+        left: 11.7%;
         font-size: 20px;
         color: #2e2c2c;
     }
@@ -99,7 +104,7 @@
     .navName {
         position: absolute;
         top: 35px;
-        left: 80px;
+        left: 11%;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
         color: #2e2c2c;
