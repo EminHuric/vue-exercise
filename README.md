@@ -1,1 +1,1 @@
-vue-exercise-rho.vercel.app
+https://vue-exercise-rho.vercel.app/
