@@ -41,6 +41,7 @@
         bottom: 0;
         padding-left: 30px;
         display: block;
+        padding-bottom: env(safe-area-inset-bottom);
     }
     .navLogo1 {
         position: absolute;
