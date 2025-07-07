@@ -45,30 +45,51 @@
     </div>
   </nav>
   <Mm />
-  
 
-  <button class="menuT" style="margin-top: -95px; position: absolute; display: none;" @click="showMenu"><i class="fa-solid fa-bars"></i></button>
+
+  <button class="menuT" style="margin-top: -95px; position: absolute; display: none;" @click="showMenu"><i
+      class="fa-solid fa-bars"></i></button>
   <div v-if="menu2" class="overlay" @click="menu2 = false">
-        <div class="menu2" @click.stop>
-          <div class="search-bar">
-            <input type="text" placeholder="Search product" />
-            <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
-          <div class="mc">
-            <div class="m">MENU</div>
-            <div class="b">CATEGORIES</div>
-          </div>
-          <ul class="menuItem">
-            <li><a href="index.html" class="m1">HOME</a></li><br>
-            <li><router-link to="/shop" class="m2">SHOP</router-link></li>
-            <li><router-link to="/family-card" class="m3">FAMILY CARD</router-link></li>
-            <li><router-link to="/contact" class="m4">CONTACT</router-link></li>
-            <li><router-link to="/catalog" class="m5">CATALOG</router-link></li>
-            <li><router-link to="/favorite" class="m5">FAVORITE</router-link></li>
-            <li><router-link to="/login" class="m6">LOG IN / SIGN UP</router-link></li>
-          </ul>
-        </div>
+    <div class="menu2" @click.stop>
+      <div class="search-bar">
+        <input type="text" placeholder="Search product" />
+        <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
+      <div class="m" :class="{ active: activeTab === 'menu' }" @click="activeTab = 'menu'">MENU</div>
+      <div class="b" :class="{ active: activeTab === 'categories' }" @click="activeTab = 'categories'">CATEGORIES</div>
+
+      <ul class="menuItem" v-if="activeTab === 'menu'">
+        <li><a href="index.html" class="m1">HOME</a></li><br>
+        <li><router-link to="/shop" class="m2">SHOP</router-link></li>
+        <li><router-link to="/family-card" class="m3">FAMILY CARD</router-link></li>
+        <li><router-link to="/contact" class="m4">CONTACT</router-link></li>
+        <li><router-link to="/catalog" class="mcc">CATALOG</router-link></li>
+        <li><router-link to="/favorite" class="m5">
+        <span style="display: flex;"><i class="far fa-heart"></i> <span style="margin-left: 6px;">FAVORITE</span></span>
+      </router-link></li>
+        <li><router-link to="/login" class="m6">
+          <span style="display: flex;"><i class="fa-regular fa-user"></i> <span style="margin-left: 6px;">LOG IN / SIGN UP</span></span>
+        </router-link></li>
+      </ul>
+      <ul class="menuItem" v-else>
+        <li><router-link to="/gadgets" class="b1">
+           <span style="display: flex; margin-top: -10px; margin-left: 15px;"><i class="fas fa-microchip"></i> <span class="gd">GADGETS</span></span>
+        </router-link></li>
+        <li><router-link to="/kitchen" class="b2">
+          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fa-solid fa-kitchen-set"></i> <span class="gd">KITCHEN</span></span>
+        </router-link></li>
+        <li><router-link to="/home and garden" class="b3">
+          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-seedling"></i> <span class="gd">HOME AND GARDEN</span></span>
+        </router-link></li>
+        <li><router-link to="/health & beauty" class="b4">
+          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-heartbeat"></i> <span class="gd">HEALTH & BEAUTY</span></span>
+        </router-link></li>
+        <li><router-link to="/action" class="b5">
+          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-tag"></i> <span class="gd">ACTION</span></span>
+        </router-link></li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -77,57 +98,132 @@ import Welcome from './welcome.vue'
 import Mm from './mainMenu.vue'
 
 const menu2 = ref(false)
+const activeTab = ref('menu')
+
 function showMenu() {
   menu2.value = !menu2.value
 }
 </script>
 
 <style scoped>
-@media (min-width: 1921px) and (max-width: 3025px) {
-
+.gd {
+  margin-left: 10px;
 }
+.b5 {
+  border: 1px solid #dad8d8;
+  padding: 20px 30px;
+  padding-right: 63.5%;
+  margin-left: -50px;
+  position: absolute;
+  top: 353px;
+  border-top: none;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.b4 {
+  border: 1px solid #dad8d8;
+  padding: 20px 30px;
+  padding-right: 35.3%;
+  margin-left: -50px;
+  position: absolute;
+  top: 294px;
+  border-top: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.b3 {
+  border: 1px solid #dad8d8;
+  padding: 15px 30px;
+  padding-right: 31.2%;
+  margin-left: -50px;
+  position: absolute;
+  top: 245px;
+  border-top: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.b2 {
+  border: 1px solid #dad8d8;
+  padding: 20px 30px;
+  padding-right: 59.3%;
+  margin-left: -50px;
+  position: absolute;
+  top: 185px;
+  border-top: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.b1 {
+  border: 1px solid #dad8d8;
+  padding: 15px 10px;
+  padding-bottom: 15px;
+  padding-right: 58%;
+  position: absolute;
+  left: 0;
+  color: #333;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.active {
+  background-color: rgb(0, 0, 0, 0.2) !important;
+  color: rgb(0, 0, 0);
+  border-color: green !important;
+}
+
+@media (min-width: 1921px) and (max-width: 3025px) {}
+
 @media (min-width: 1024px) and (max-width: 1920px) {
   .logo {
     margin-left: 295px !important;
   }
 }
+
 @media (min-width: 1024px) and (max-width: 1709px) {
   .logo {
     margin-left: 5px !important;
   }
+
   .user {
     margin-left: 50px !important;
   }
+
   .sr {
     font-size: 13px !important;
     margin-top: 45px !important;
   }
+
   .favoriteLogo {
     margin-top: 38px !important;
     font-size: 22px !important;
     margin-left: 15px !important;
   }
+
   .bag {
     margin-left: 35px !important;
   }
+
   .search {
     margin-left: -10px !important;
   }
 }
+
 @media (min-width: 1029px) and (max-width: 1709px) {
   .logo {
     margin-left: -5px !important;
   }
+
   .user {
     margin-left: 80px !important;
   }
+
   .search {
     width: 48% !important;
-    margin-left: 10px  !important;
+    margin-left: 10px !important;
   }
 
 }
+
 @media (max-width: 420px) {
+
   .search,
   .category,
   #searchLogo,
@@ -136,25 +232,40 @@ function showMenu() {
   .fv {
     display: none;
   }
+
   .logo {
     margin-left: 30% !important;
     height: 125px !important;
     width: 150px !important;
   }
+
   .menu {
     height: 50px !important;
   }
+
   .bag {
     margin-left: 60px !important;
   }
+
   .menuT {
-    display:  block !important;
+    display: block !important;
     background: none;
     border: none;
     font-size: 20px;
   }
+
   .menu2 {
     width: 79% !important;
+  }
+  .m {
+    width: 30.5% !important;
+    margin-top: 70px !important;
+    font-weight: normal;
+  }
+  .b {
+    margin-left: 45% !important;
+    margin-top: -63px !important;
+    width: 39.5% !important;
   }
 }
 
@@ -165,13 +276,26 @@ function showMenu() {
   padding: 16px 30px;
   color: #333;
   border-top: none;
-  padding-right: 57.5%;
+  padding-right: 49.9%;
   border-right: none;
   margin-left: -50px;
   font-family: Arial, Helvetica, sans-serif;
   border-left: none;
 }
+
 .m5 {
+  display: inline-block;
+  border: 1px solid #dad8d8;
+  padding: 16px 30px;
+  color: #333;
+  border-top: none;
+  padding-right: 70.5%;
+  border-right: none;
+  margin-left: -50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left: none;
+}
+.mcc {
   display: inline-block;
   border: 1px solid #dad8d8;
   padding: 16px 30px;
@@ -195,6 +319,7 @@ function showMenu() {
   font-family: Arial, Helvetica, sans-serif;
   border-left: none;
 }
+
 .m3 {
   display: inline-block;
   border: 1px solid #dad8d8;
@@ -208,6 +333,7 @@ function showMenu() {
   border-left: none;
   border-top: none;
 }
+
 .m2 {
   display: inline-block;
   border: 1px solid #dad8d8;
@@ -331,6 +457,23 @@ function showMenu() {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .active {
+  background-color: rgb(0, 0, 0, 0.2) !important;
+  color: rgb(0, 0, 0);
+  border-color: green !important;
+
+}
+  .m {
+    width: 30.5% !important;
+    margin-top: 70px !important;
+    font-weight: normal;
+  }
+  .b {
+    margin-left: 45%;
+    margin-top: -63px;
+    width: 40%;
+    position: absolute;
+  }
   .bagT {
     display: block;
     font-size: 20px;
