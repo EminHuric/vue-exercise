@@ -14,7 +14,7 @@
             <div class="b">CATEGORIES</div>
           </div>
           <ul class="menuItem">
-            <li><a href="index.html" class="m1">HOME</a></li><br>
+            <li><router-link to="/" class="m2">HOME</router-link></li>
             <li><router-link to="/shop" class="m2">SHOP</router-link></li>
             <li><router-link to="/family-card" class="m3">FAMILY CARD</router-link></li>
             <li><router-link to="/contact" class="m4">CONTACT</router-link></li>
@@ -22,10 +22,10 @@
             <li><router-link to="/favorite" class="m5">FAVORITE</router-link></li>
             <li><router-link to="/login" class="m6">LOG IN / SIGN UP</router-link></li>
           </ul>
+          
         </div>
       </div>
     </div>
-
     <div class="container">
       <img class="logo" src="/logo1.png" alt="logo" />
 
@@ -44,10 +44,11 @@
       </div>
     </div>
   </nav>
+  <router-view />
   <Mm />
 
 
-  <button class="menuT" style="margin-top: -95px; position: absolute; display: none;" @click="showMenu"><i
+  <button class="menuT" style="margin-top: -95px; position: relative; display: none;" @click="showMenu"><i
       class="fa-solid fa-bars"></i></button>
   <div v-if="menu2" class="overlay" @click="menu2 = false">
     <div class="menu2" @click.stop>
@@ -65,28 +66,35 @@
         <li><router-link to="/contact" class="m4">CONTACT</router-link></li>
         <li><router-link to="/catalog" class="mcc">CATALOG</router-link></li>
         <li><router-link to="/favorite" class="m5">
-        <span style="display: flex;"><i class="far fa-heart"></i> <span style="margin-left: 6px;">FAVORITE</span></span>
-      </router-link></li>
+            <span style="display: flex;"><i class="far fa-heart"></i> <span
+                style="margin-left: 6px;">FAVORITE</span></span>
+          </router-link></li>
         <li><router-link to="/login" class="m6">
-          <span style="display: flex;"><i class="fa-regular fa-user"></i> <span style="margin-left: 6px;">LOG IN / SIGN UP</span></span>
-        </router-link></li>
+            <span style="display: flex;"><i class="fa-regular fa-user"></i> <span style="margin-left: 6px;">LOG IN /
+                SIGN UP</span></span>
+          </router-link></li>
       </ul>
       <ul class="menuItem" v-else>
         <li><router-link to="/gadgets" class="b1">
-           <span style="display: flex; margin-top: -10px; margin-left: 15px;"><i class="fas fa-microchip"></i> <span class="gd">GADGETS</span></span>
-        </router-link></li>
+            <span style="display: flex; margin-top: -10px; margin-left: 15px;"><i class="fas fa-microchip"></i> <span
+                class="gd">GADGETS</span></span>
+          </router-link></li>
         <li><router-link to="/kitchen" class="b2">
-          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fa-solid fa-kitchen-set"></i> <span class="gd">KITCHEN</span></span>
-        </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fa-solid fa-kitchen-set"></i>
+              <span class="gd">KITCHEN</span></span>
+          </router-link></li>
         <li><router-link to="/home and garden" class="b3">
-          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-seedling"></i> <span class="gd">HOME AND GARDEN</span></span>
-        </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-seedling"></i> <span
+                class="gd">HOME AND GARDEN</span></span>
+          </router-link></li>
         <li><router-link to="/health & beauty" class="b4">
-          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-heartbeat"></i> <span class="gd">HEALTH & BEAUTY</span></span>
-        </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-heartbeat"></i> <span
+                class="gd">HEALTH & BEAUTY</span></span>
+          </router-link></li>
         <li><router-link to="/action" class="b5">
-          <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-tag"></i> <span class="gd">ACTION</span></span>
-        </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-tag"></i> <span
+                class="gd">ACTION</span></span>
+          </router-link></li>
       </ul>
     </div>
   </div>
@@ -106,9 +114,33 @@ function showMenu() {
 </script>
 
 <style scoped>
+@media (min-width: 2758px) and (max-width: 3025px) {
+  .logo {
+    transform: translateX(270px);
+  }
+  .search {
+    transform: translateX(270px);
+  }
+  .category {
+    transform: translateX(270px);
+  }
+  #searchLogo {
+    transform: translateX(270px);
+}
+.user {
+  transform: translateX(270px);
+}
+.sr {
+  transform: translateX(270px);
+}
+.favoriteLogo {
+  transform: translateX(270px);
+}
+}
 .gd {
   margin-left: 10px;
 }
+
 .b5 {
   border: 1px solid #dad8d8;
   padding: 20px 30px;
@@ -118,8 +150,9 @@ function showMenu() {
   top: 353px;
   border-top: none;
   font-family: Arial, Helvetica, sans-serif;
-  
+
 }
+
 .b4 {
   border: 1px solid #dad8d8;
   padding: 20px 30px;
@@ -130,6 +163,7 @@ function showMenu() {
   border-top: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .b3 {
   border: 1px solid #dad8d8;
   padding: 15px 30px;
@@ -140,6 +174,7 @@ function showMenu() {
   border-top: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .b2 {
   border: 1px solid #dad8d8;
   padding: 20px 30px;
@@ -150,6 +185,7 @@ function showMenu() {
   border-top: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .b1 {
   border: 1px solid #dad8d8;
   padding: 15px 10px;
@@ -163,6 +199,7 @@ function showMenu() {
   border-top: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .active {
   background-color: rgb(0, 0, 0, 0.2) !important;
   color: rgb(0, 0, 0);
@@ -221,7 +258,93 @@ function showMenu() {
   }
 
 }
+@media (min-width: 421px) and (max-width: 767px) {
+  .search,
+  .category,
+  #searchLogo,
+  .user,
+  .sr,
+  .fv {
+    display: none;
+  }
+  .logo {
+    margin-left: 30% !important;
+    height: 125px !important;
+    width: 150px !important;
+  }
 
+  .menu {
+    height: 50px !important;
+  }
+  .bag {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+  }
+
+  .menuT {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-top: 57px !important;
+  }
+  .menu2 {
+    width: 79% !important;
+  }
+
+  .m {
+    width: 30.5% !important;
+    margin-top: 70px !important;
+    font-weight: normal;
+  }
+.m1 {
+  width: 222% !important;
+}
+.m2 {
+  width: 12.8%;
+}
+
+  .b {
+    margin-left: 45% !important;
+    margin-top: -63px !important;
+    width: 39.3% !important;
+  }
+  .b1 {
+    width: 38%;
+  }
+  .b2 {
+    width: 34.3% !important;
+  }
+  .b3 {
+    width: 62.3%;
+  }
+  .b4 {
+    width: 58.3%;
+  }
+  .b5 {
+    width: 30%;
+  }
+
+  .m1 {
+    padding-right: 94.9% !important;
+  }
+  .m2 {
+    width: 13%;
+  }
+  .mcc {
+    width: 24%;
+  }
+  .m4 {
+    width: 24.5%;
+  }
+  .m5 {
+    width: 33%;
+  }
+  .m6 {
+    width: 53.7%;
+  }
+}
 @media (max-width: 420px) {
 
   .search,
@@ -244,7 +367,8 @@ function showMenu() {
   }
 
   .bag {
-    margin-left: 60px !important;
+    position: absolute;
+    right: 20px;
   }
 
   .menuT {
@@ -252,20 +376,38 @@ function showMenu() {
     background: none;
     border: none;
     font-size: 20px;
+    margin-top: 57px !important;
   }
 
   .menu2 {
     width: 79% !important;
   }
+
   .m {
     width: 30.5% !important;
     margin-top: 70px !important;
     font-weight: normal;
   }
+
   .b {
     margin-left: 45% !important;
     margin-top: -63px !important;
     width: 39.5% !important;
+  }
+  .b1 {
+    width: 38.7%;
+  }
+  .b2 {
+    width: 33.5% !important;
+  }
+  .b3 {
+    width: 61.5%;
+  }
+  .b4 {
+    width: 57.5%;
+  }
+  .b5 {
+    width: 29.4%;
   }
 }
 
@@ -295,6 +437,7 @@ function showMenu() {
   font-family: Arial, Helvetica, sans-serif;
   border-left: none;
 }
+
 .mcc {
   display: inline-block;
   border: 1px solid #dad8d8;
@@ -307,6 +450,7 @@ function showMenu() {
   font-family: Arial, Helvetica, sans-serif;
   border-left: none;
 }
+
 .m4 {
   display: inline-block;
   border: 1px solid #dad8d8;
@@ -457,23 +601,64 @@ function showMenu() {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .m1 {
+    padding-right: 90.5%;
+  }
+  .m2 {
+    width: 17%;
+  }
+  .mcc {
+    width: 28%;
+  }
+  .m4 {
+    width: 28%;
+  }
+  .m5 {
+    width: 37%;
+  }
+  .m6 {
+    width: 57%;
+  }
+  .b {
+    margin-left: 45% !important;
+    margin-top: -63px !important;
+    width: 39.5% !important;
+  }
+  .b1 {
+    width: 38.7%;
+  }
+  .b2 {
+    width: 33.5% !important;
+  }
+  .b3 {
+    width: 61.5%;
+  }
+  .b4 {
+    width: 57.5%;
+  }
+  .b5 {
+    width: 29.4%;
+  }
   .active {
-  background-color: rgb(0, 0, 0, 0.2) !important;
-  color: rgb(0, 0, 0);
-  border-color: green !important;
+    background-color: rgb(0, 0, 0, 0.2) !important;
+    color: rgb(0, 0, 0);
+    border-color: green !important;
 
-}
+  }
+
   .m {
     width: 30.5% !important;
     margin-top: 70px !important;
     font-weight: normal;
   }
+
   .b {
     margin-left: 45%;
     margin-top: -63px;
     width: 40%;
     position: absolute;
   }
+
   .bagT {
     display: block;
     font-size: 20px;

@@ -12,7 +12,17 @@
 </template>
 
 <style scoped>
-
+@media (min-width: 2758px) and (max-width: 3025px) {
+    .wP {
+        transform: translateX(270px) !important; 
+    }
+     .t {
+        transform: translateX(200px) !important;
+    }
+    .tt {
+        transform: translateX(200px) !important;
+    }
+}
 @media (min-width: 1024px) and (max-width: 1920px) {
     .wP {
         margin-left: 315px !important;
@@ -73,7 +83,17 @@
         margin-left: 28% !important;
     }
 }
-
+@media (min-width: 421px) and (max-width: 767px) {
+    .wP {
+        margin-left: 20px !important;
+        font-size: 14px !important;
+        position: absolute;
+        left: 13%;
+    }
+    .tt, .t {
+        display: none;
+    }
+}
 @media (max-width: 420px) {
   .wP {
     margin-left: 9% !important;

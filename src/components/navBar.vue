@@ -29,6 +29,91 @@
 .navBar {
     display: none;
 }
+@media (min-width: 421px) and (max-width: 767px) {
+    .navBar {
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        height: 50px;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding-left: 30px;
+        display: block;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    .navLogo1 {
+        position: absolute;
+        top: 10px;
+        left: 33.3%;
+        font-size: 18px;
+        color: #272626;
+    }
+
+    .navName1 {
+        position: absolute;
+        top: 30px;
+        left: 30%;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #2e2c2c;
+    }
+
+    .navLogo {
+        position: absolute;
+        top: 10px;
+        left: 7.5% !important;
+        font-size: 18px;
+        color: #2e2c2c;
+    }
+
+    .navName {
+        position: absolute;
+        top: 30px;
+        left: 6%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #2e2c2c;
+    }
+    .navLogo3 {
+        position: absolute;
+        top: 10px;
+        left: 80.9%;
+        font-size: 18px;
+        color: #2e2c2c;
+    }
+
+    .navName3 {
+        position: absolute;
+        top: 30px;
+        left: 77%;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #2e2c2c;
+
+    }
+    
+    .navLogo2 {
+        position: absolute;
+        top: 10px;
+        left: 57.7%;
+        font-size: 18px;
+        color: #2e2c2c;
+    }
+
+    .navName2 {
+        position: absolute;
+        top: 30px;
+        left: 54%;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #2e2c2c;
+
+    }
+
+
+}
 @media (max-width: 420px) {
     .navBar {
         border: 1px solid rgb(255, 255, 255);

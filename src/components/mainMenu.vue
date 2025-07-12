@@ -33,35 +33,64 @@
             </ul>
         </div>
     </div>
-    <div class="main-menu ">
-        <a href="index.html">
+    <div class="main-menu">
+        <router-link to="/">
             <span class="menu-item">HOME</span>
-        </a>
-        <a href="#">
+        </router-link>
+
+        <router-link to="/shop">
             <span class="menu-item">SHOP</span>
-        </a>
-        <a href="#">
+        </router-link>
+
+        <router-link to="/contact">
             <span class="menu-item">CONTACT</span>
-        </a>
-        <a href="#">
+        </router-link>
+
+        <router-link to="/catalog">
             <span class="menu-item">CATALOG</span>
-        </a>
-        <a href="#">
+        </router-link>
+
+        <router-link to="/family-card">
             <span class="fcd">FAMILY CARD DISCOUNT</span>
-        </a>
+        </router-link>
     </div>
+
 </template>
 
-<style >
+<style>
+@media (min-width: 2412px) and (max-width: 3025px) {
+    .main-menu {
+        transform: translateX(-150px) !important;
+    }
+
+    .categoriesButton {
+        transform: translateX(20px);
+    }
+}
+
+@media (min-width: 2201px) and (max-width: 3025px) {
+    .main-menu {
+        transform: translateX(-120px);
+    }
+}
+
 @media (min-width: 1921px) and (max-width: 3025px) {
-  .categoriesButton {
-    transform: translateX(0px) !important;
-  }
+    .categoriesButton {
+        margin-left: 620px !important;
+    }
+
+    .fcd {
+        margin-left: 400px !important;
+    }
+
+    .main-menu {
+        margin-left: 120px !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1108px) {
   .main-menu {
-    transform: translateX(0px) !important;
-  }
-  .fcd {
-    margin-left: 400px !important;
+    left: 180px !important; /* pomeraš sa 130px na 150px */
   }
 }
 
@@ -71,14 +100,13 @@
     }
 
     .main-menu {
-        margin-left: -70px !important;
+        margin-left: 0px !important;
     }
 
     .menu-item,
     .fcd {
         margin-left: 0;
     }
-
     .categories {
         margin-left: 310px !important;
     }
@@ -88,6 +116,7 @@
     .categoriesButton {
         transform: translateX(-5px) !important;
     }
+
     .categories {
         transform: translateX(-5px) !important;
     }
@@ -101,6 +130,7 @@
     .categoriesButton {
         transform: translateX(240px);
     }
+
     .categories {
         transform: translateX(240px);
     }
@@ -116,6 +146,7 @@
     .categoriesButton {
         margin-left: 20px !important;
     }
+
     .categories {
         margin-left: 20px !important;
     }
@@ -142,7 +173,14 @@
         display: none;
     }
 }
-
+@media (min-width: 421px) and (max-width: 767px) {
+    .mm {
+        display: none;
+    }
+    .main-menu a {
+        display: none;
+    }
+}
 @media (max-width: 420px) {
     .mm {
         display: none;
@@ -152,6 +190,7 @@
         display: none;
     }
 }
+
 .fcd {
     margin-left: 390px;
     font-size: 13px;
@@ -173,12 +212,17 @@
 }
 
 .main-menu {
-    margin-top: 4px;
     position: absolute;
+    top: 147px;
+    left: 130px;
+    right: 0;
     display: flex;
-    left: 37.4%;
-    width: 1000%;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
 }
+
 
 .categoriesButton:hover~.categories,
 .categories:hover {
