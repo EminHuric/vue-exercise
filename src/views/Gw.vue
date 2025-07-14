@@ -45,7 +45,7 @@
     text-align: justify !important;
   }
   .s {
-    margin-top: -45px !important;
+    top: 11.5% !important;
   }
 }
 @media (min-width: 1026px) and (max-width: 1280px) {
