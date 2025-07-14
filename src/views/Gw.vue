@@ -1,5 +1,4 @@
 <script setup>
-
 </script>
 
 <template>
@@ -44,10 +43,16 @@
 
         <input id="phoneNumber" type="tel" inputmode="numeric" pattern="[0-9]*" placeholder="Phone number"
           @input="phoneNumber = phoneNumber.replace(/\D/g, '')" required />
+          <div class="container">
+            <div>
         <p class="label">Order ID</p>
         <input type="text" name="Order ID" placeholder="#1..." class="id" required />
+        </div>
+        <div>
         <p class="label1">Date of purchase</p>
         <input type="date" id="purchaseDate" name="purchaseDate" class="date" required />
+        </div>
+        </div>
         <input type="hidden" name="_next" value="https://google.com" />
         <div class="sendButton">
           <button class="send">SEND</button>
@@ -82,26 +87,30 @@
     margin-left: -2px !important;
   }
   .label {
-    margin-left: 15% !important;
+    margin-left: 10% !important;
+    margin-top: 15px !important;
   }
   .date {
-    width: 40% !important;
-    margin-left: 50% !important;
+    width: 80% !important;
+    margin-left: 1% !important;
 
   }
   .label1 {
-    margin-top: -93px !important;
-    width: 40% !important;
-    margin-left: 53% !important;
+    margin-top: 15px !important;
+    width: 80% !important;
+    margin-left: 2% !important;
   }
   .id {
-    margin-left: 5% !important;
-    width: 38% !important;
+    margin-left: 10% !important;
+    width: 70% !important;
+    height: 51px !important;
+    margin-top: -2px !important;
   }
 }
 .label1 {
-  margin-top: -92px;
-  margin-left: 69%;
+  margin-top: 15px;
+  margin-left: 240%;
+  width: 100%;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -114,10 +123,10 @@
 }
 
 .date {
-  margin-top: -3px;
-  margin-left: 69%;
-  height: 52px;
-  width: 20%;
+  margin-top: -4px;
+  margin-left: 240%;
+  height: 54px;
+  width: 90%;
   padding-left: 10px;
   font-size: 20px;
 }
@@ -180,9 +189,9 @@
 
 .id {
   margin-top: 0px;
-  margin-left: 10.5%;
+  margin-left: 39.5%;
   height: 50px;
-  width: 20%;
+  width: 60%;
   padding-left: 10px;
   font-size: 20px;
 }
@@ -211,6 +220,7 @@
   height: 600px;
   margin-left: 30%;
   border-radius: 12px;
+
 }
 
 .h1 {
