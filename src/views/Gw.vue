@@ -97,7 +97,7 @@
   }
   .label1 {
     margin-top: 15px !important;
-    width: 100% !important;
+    width: 100000% !important;
     margin-left: 2% !important;
   }
   .id {
