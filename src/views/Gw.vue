@@ -102,7 +102,7 @@
   }
   .id {
     margin-left: 10% !important;
-    width: 70% !important;
+    width: 60% !important;
     height: 51px !important;
     margin-top: -2px !important;
   }
