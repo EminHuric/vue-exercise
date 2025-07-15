@@ -150,7 +150,7 @@
   .notification {
     margin-left: 2% !important;
     margin-right: 2% !important;
-  }
+  } 
   .surveyFrame {
     margin-left: 5% !important;
     width: 90% !important;
