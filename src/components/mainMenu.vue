@@ -278,10 +278,10 @@ ul a {
 .categoriesButton {
     border: 1px solid rgb(12, 173, 12);
     background-color: rgb(12, 173, 12);
-    height: 15px;
+    height: 14px;
     width: 220px;
     margin-left: 27%;
-    padding: 14px;
+    padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     position: absolute;

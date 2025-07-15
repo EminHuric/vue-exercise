@@ -67,7 +67,109 @@
 
 
 <style scoped>
+@media (min-width: 1921px) {
+  .notification {
+    margin-left: 25% !important;
+    margin-right: 25% !important;
+    font-size: 18px !important;
+  }
+
+  .gwPhoto {
+    margin-left: 25% !important;
+    width: 50% !important;
+  }
+
+  .gwh {
+    font-size: 60px !important;
+  }
+
+  /* Dodaj još elemenata ako želiš da ih proširiš ili centiraš više */
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .s {
+    top: 18.1% !important;
+  }
+
+  .notification {
+    margin-left: 8% !important;
+    margin-right: 8% !important;
+    font-size: 17px !important;
+  }
+
+  .gwPhoto {
+    margin-left: 8% !important;
+    width: 85%;
+    margin-top: 20px !important;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .s {
+    position: absolute;
+    top: 18.1% !important;
+  }
+  .surveyFrame {
+    margin-left: 10% !important;
+    width: 80% !important;
+  }
+  .date {
+    margin-left: 180% !important;
+  }
+  .label1 {
+    margin-left: 180% !important;
+  }
+  .notification {
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+    font-size: 17.5px !important;
+  }
+
+  .gwPhoto {
+    margin-left: 2% !important;
+    width: 96% !important;
+    margin-top: 20px !important;
+  }
+
+  .gwh {
+    font-size: 40px !important;
+    margin-top: 30px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gwPhoto2 {
+    display: none;
+  }
+  .gwPhoto {
+    display: block;
+    margin-left: 2% !important;
+    width: 96%;
+  }
+  .gwh {
+    margin-top: 50px !important;
+  }
+  .notification {
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+  }
+  .surveyFrame {
+    margin-left: 5% !important;
+    width: 90% !important;
+  }
+  .date {
+    margin-left: 125% !important;
+  }
+  .label1 {
+    margin-left: 125% !important;
+    margin-top: 19px !important;
+  }
+  .s {
+    margin-top: -7.8% !important;
+  }
+}
 @media (max-width: 420px) {
+  .sendButton {
+    margin-top: 30px !important;
+  }
   .name, .email {
     width: 85% !important;
     margin-left: 5% !important;
@@ -87,26 +189,57 @@
     margin-left: -2px !important;
   }
   .label {
-    margin-left: 10% !important;
+    margin-left: 80% !important;
+    width: 100%;
     margin-top: 15px !important;
   }
   .date {
     width: 80% !important;
-    margin-left: 1% !important;
+    margin-left: -45% !important;
 
   }
   .label1 {
-    margin-top: 15px !important;
+    margin-top: 150px !important;
     width: 100000% !important;
-    margin-left: 2% !important;
+    margin-left: -40% !important;
   }
   .id {
-    margin-left: 10% !important;
-    width: 60% !important;
+    margin-left: 55% !important;
+    width: 80% !important;
     height: 51px !important;
     margin-top: -2px !important;
   }
+  .gwPhoto {
+    display: none !important;
+  }
+
+  .gwPhoto2 {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+
+  .gwh {
+    font-size: 38px !important;
+    margin-top: 20px !important;
+  }
+
+  .notification {
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+    font-size: 14px !important;
+    text-align: justify !important;
+  }
+
+  .s {
+    top: 9.5% !important;
+  }
 }
+
+
+
+
+
 .label1 {
   margin-top: 15px;
   margin-left: 240%;
@@ -229,74 +362,7 @@
   margin-top: 100px;
 }
 
-@media (max-width: 420px) {
-  .gwPhoto {
-    display: none !important;
-  }
 
-  .gwPhoto2 {
-    display: block !important;
-    width: 100% !important;
-    margin-top: 20px !important;
-  }
-
-  .gwh {
-    font-size: 38px !important;
-    margin-top: 20px !important;
-  }
-
-  .notification {
-    margin-left: 2% !important;
-    margin-right: 2% !important;
-    font-size: 14px !important;
-    text-align: justify !important;
-  }
-
-  .s {
-    top: 11.5% !important;
-  }
-}
-
-@media (min-width: 1026px) and (max-width: 1280px) {
-  .s {
-    position: absolute;
-    top: 18.9% !important;
-  }
-
-  .notification {
-    margin-left: 2% !important;
-    margin-right: 2% !important;
-    font-size: 17.5px !important;
-  }
-
-  .gwPhoto {
-    margin-left: 2% !important;
-    width: 96% !important;
-    margin-top: 20px !important;
-  }
-
-  .gwh {
-    font-size: 40px !important;
-    margin-top: 30px !important;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1920px) {
-  .s {
-    margin-top: 3.15%;
-  }
-
-  .notification {
-    margin-left: 18% !important;
-    margin-right: 18% !important;
-    font-size: 17px !important;
-  }
-
-  .gwPhoto {
-    margin-left: 18% !important;
-    width: 65%;
-  }
-}
 
 .gwPhoto2 {
   display: none;
@@ -309,7 +375,7 @@
 }
 
 .notification {
-  margin-left: 27%;
+  margin-left: 29%;
   margin-right: 26%;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -330,7 +396,7 @@
   background-color: rgb(255, 255, 255);
   position: absolute;
   left: 0;
-  top: 16.7%;
+  top: 15.8%;
   border: none;
 }
 </style>

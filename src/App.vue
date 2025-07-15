@@ -2,7 +2,7 @@
 import { ref, resolveDirective } from 'vue'
 import Men from './components/menu.vue'
 import Nav from './components/navBar.vue'
-import GwPhoto from './components/GwPhoto.vue'
+import GwPhoto from './components/gwPhoto.vue'
 
 
 
