@@ -128,7 +128,8 @@
     width: 96% !important;
     margin-top: 20px !important;
   }
-
+ 
+  
   .gwh {
     font-size: 40px !important;
     margin-top: 30px !important;
