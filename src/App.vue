@@ -1,28 +1,22 @@
 <script setup>
-import { ref, resolveDirective } from 'vue'
 import Men from './components/menu.vue'
-import Nav from './components/navBar.vue'
-import gwPhoto from './components/gwPhoto.vue'
-
-
-
-
+import Nav from './components/nav-bar.vue'
+import GwPhoto from './components/gw-photo.vue'
 </script>
 
 <template>
   <Men />
-  <gwPhoto />
+  <GwPhoto />
   <router-view />
   <Nav />
 </template>
 
 
 <style scoped>
-.cta{
+.cta {
   margin-top: 180px;
   width: 80%;
   height: 620px;
   margin-left: 210px;
 }
 </style>
-
