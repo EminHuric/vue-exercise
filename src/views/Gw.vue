@@ -3,7 +3,7 @@
 
 <template>
   <div class="s">
-    <h1 class="gwh">🎁 PRIZE GAME 🎁</h1>
+    <h1 class="gwh"></h1>
     <p class="notification">To participate in the prize game, your order total must exceed €100.
       After completing your purchase, your participation becomes valid only
       after you fill out a short <a href="#survey">SURVEY</a> located at the bottom of this page.
@@ -129,7 +129,7 @@
     margin-top: 20px !important;
   }
  
-  
+
   .gwh {
     font-size: 40px !important;
     margin-top: 30px !important;
