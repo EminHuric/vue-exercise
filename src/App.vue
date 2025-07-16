@@ -2,7 +2,7 @@
 import { ref, resolveDirective } from 'vue'
 import Men from './components/menu.vue'
 import Nav from './components/navBar.vue'
-import GwPhoto from './components/gwPhoto.vue'
+import gwPhoto from './components/gwPhoto.vue'
 
 
 
@@ -11,7 +11,7 @@ import GwPhoto from './components/gwPhoto.vue'
 
 <template>
   <Men />
-  <GwPhoto />
+  <gwPhoto />
   <router-view />
   <Nav />
 </template>
