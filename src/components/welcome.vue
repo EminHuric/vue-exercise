@@ -14,75 +14,93 @@
 <style scoped>
 @media (min-width: 2758px) and (max-width: 3025px) {
     .wP {
-        transform: translateX(270px) !important; 
+        transform: translateX(270px) !important;
     }
-     .t {
+
+    .t {
         transform: translateX(200px) !important;
     }
+
     .tt {
         transform: translateX(200px) !important;
     }
 }
+
 @media (min-width: 1024px) and (max-width: 1920px) {
     .wP {
         margin-left: 315px !important;
     }
+
     .t {
         margin-left: -80px !important;
     }
 }
+
 @media (min-width: 1029px) and (max-width: 1702px) {
     .wP {
-       transform: translateX(12px) !important;
+        transform: translateX(12px) !important;
     }
+
     .t {
         transform: translateX(30px) !important;
     }
+
     .tt {
         transform: translateX(0px) !important;
     }
-  }
-@media (min-width: 1024px) and (max-width: 1708px) {
-  .wP {
-    transform: translateX(260px);
-  }
-  .t {
-    transform: translateX(250px);
-  }
-  .tt {
-    transform: translateX(220px);
-  }
 }
+
+@media (min-width: 1024px) and (max-width: 1708px) {
+    .wP {
+        transform: translateX(260px);
+    }
+
+    .t {
+        transform: translateX(250px);
+    }
+
+    .tt {
+        transform: translateX(220px);
+    }
+}
+
 @media (min-width: 1025px) and (max-width: 1709px) {
     .wP {
         margin-left: -240px !important;
     }
+
     .t {
         margin-left: 60px !important;
     }
+
     .tt {
         margin-left: 40px !important;
     }
 }
+
 @media (min-width: 1029px) and (max-width: 1709px) {
     .wP {
-        margin-left:  0px !important;
+        margin-left: 0px !important;
     }
+
     .t {
         margin-left: 40px !important;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
     .email,
     .t,
     .tt {
         display: none;
     }
+
     .wP {
         margin-left: 28% !important;
     }
 }
+
 @media (min-width: 421px) and (max-width: 767px) {
     .wP {
         margin-left: 20px !important;
@@ -90,25 +108,30 @@
         position: absolute;
         left: 13%;
     }
-    .tt, .t {
+
+    .tt,
+    .t {
         display: none;
     }
 }
+
 @media (max-width: 420px) {
-  .wP {
-    margin-left: 9% !important;
-    margin-right: -100% !important;
-    font-size: 15px !important;
-    text-align: center;
-  }
-  .t,
-  .tt,
-  .email {
-    display: none;
-  }
-  .menuS {
-    height: 15px !important;
-  }
+    .wP {
+        margin-left: 9% !important;
+        margin-right: -100% !important;
+        font-size: 15px !important;
+        text-align: center;
+    }
+
+    .t,
+    .tt,
+    .email {
+        display: none;
+    }
+
+    .menuS {
+        height: 15px !important;
+    }
 }
 
 
@@ -153,9 +176,10 @@
 
 .vrd {
     border: 1px solid rgb(12, 173, 12);
-    height: 40px;
+    height: 44px;
     background-color: rgb(12, 173, 12);
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     width: 100%;
     left: 0px;
     top: 0px;

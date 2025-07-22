@@ -13,16 +13,23 @@
 
 
 <style scoped>
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1501px) and (max-width: 1920px) {
+  .cta {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 2% !important;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1500px) {
   .cta {
     margin-left: 1.1% !important;
-    margin-top: 5% !important;
+    margin-top: 2% !important;
     width: 97% !important;
-    height: 95% !important;
+    height: 85% !important;
     
   }
   .gwFrame {
-    height: 42% !important;
+    height: 52% !important;
     width: 100% !important;
     margin-top: 14.9% !important;
   }
@@ -91,8 +98,9 @@
     height: 620px;
     margin-top: 182px;
     width: 100%;
-    position: absolute;
+    position: relative;
     left: 0;
+    z-index: -11111111;
 }
 .cta2 {
   display: none;
@@ -101,5 +109,6 @@
   width: 80%;
   height: 620px;
   margin-left: 210px;
+  position: relative;
 }
 </style>

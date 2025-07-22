@@ -60,7 +60,7 @@
 <style>
 @media (min-width: 2412px) and (max-width: 3025px) {
     .main-menu {
-        transform: translateX(-150px) !important;
+        transform: translateX(50px) !important;
     }
 
     .categoriesButton {
@@ -68,15 +68,15 @@
     }
 }
 
-@media (min-width: 2201px) and (max-width: 3025px) {
+@media (min-width: 2201px) and (max-width: 2411px) {
     .main-menu {
-        transform: translateX(-120px);
+        transform: translateX(50px);
     }
 }
 
-@media (min-width: 1921px) and (max-width: 3025px) {
+@media (min-width: 1921px) and (max-width: 2200px) {
     .categoriesButton {
-        margin-left: 620px !important;
+        margin-left: 500px !important;
     }
 
     .fcd {
@@ -84,7 +84,7 @@
     }
 
     .main-menu {
-        margin-left: 120px !important;
+        margin-left: 150px !important;
     }
 }
 
@@ -212,7 +212,7 @@
 }
 
 .main-menu {
-    position: absolute;
+    position: fixed;
     top: 147px;
     left: 130px;
     right: 0;
@@ -221,6 +221,7 @@
     padding: 10px 0;
     margin: 0;
     width: 100%;
+    z-index: 9999;
 }
 
 
@@ -257,11 +258,12 @@ ul a {
 .categories {
     border: 1px solid rgb(221, 221, 221);
     background-color: white;
-    margin-left: 27%;
+    margin-left: 26.85%;
     width: 248px;
     height: 222px;
     display: none;
-    margin-top: 45px;
+    position: absolute;
+    top: 45px;
 }
 
 .downArrow {
@@ -297,11 +299,12 @@ ul a {
     border: 1px solid rgb(221, 221, 221);
     height: 45px;
     background-color: white;
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0px;
     top: 145px;
     border-left: none;
     border-right: none;
+    z-index: 9999;
 }
 </style>

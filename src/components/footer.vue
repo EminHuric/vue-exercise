@@ -1,0 +1,477 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const showInfo = ref(false)
+const showFollow = ref(false)
+
+onMounted(() => {
+  document.getElementById("emailForm").addEventListener("submit", function (event) {
+    const email = document.getElementById("email").value.trim();
+    const errorElement = document.getElementById("error");
+
+    if (email === "") {
+      errorElement.textContent = "Email cannot be empty.";
+      event.preventDefault();
+      return;
+    }
+
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!pattern.test(email)) {
+      errorElement.textContent = "Please enter a valid email (e.g. name@domain.com)";
+      event.preventDefault();
+      return;
+    }
+
+    errorElement.textContent = ""; // Clear error if valid
+  });
+});
+</script>
+
+<template>
+  <div class="page">
+    <div class="content">
+      <form id="emailForm" class="ne" action="https://formsubmit.co/ehrx09@gmail.com" method="POST">
+        <h1 class="sub">Subscribe to our newsletter</h1>
+        <input id="email" name="email" type="email" placeholder="Your email address" class="yea" />
+        <button class="join" type="submit">Join</button>
+        <p class="notification">It will be used in accordance with our <a href="" class="privacy">Privacy Policy</a></p>
+      </form>
+    </div>
+
+    <footer>
+      <div class="partners">
+        <div class="container">
+          <img alt="partner1" src="/public/partner1.webp" class="partner1" />
+          <img alt="partner2" src="/public/partner2.png" class="partner2" />
+          <img alt="partner3" src="/public/partner3.png" class="partner3" />
+          <img alt="partner4" src="/public/partner4.png" class="partner4" />
+        </div>
+      </div>
+      <div class="footer">
+        <img alt="logo" src="/public/logo1.png" class="logo" />
+        <p class="info">Company information YourHotel:</p>
+        <p class="pib">PIB: 113945567</p>
+        <p class="pib">MB: 219490000</p>
+        <p class="loc"><i class="fas fa-map-marker-alt"></i> Vršačka br. 13, L1, 21000 Novi Sad</p>
+        <p class="p1"><i class="fas fa-phone"></i> Information: +381 65 220 62 69</p>
+        <p class="p2"><i class="fas fa-phone"></i> Customer support +381 69 100 99 32</p>
+        <p class="email"><i class="fas fa-envelope"></i> ehrx09@gmail.com</p>
+
+        <div class="aboutPhone">
+          <p class="about" @click="showInfo = !showInfo" style="cursor: pointer; user-select: none;">
+            ABOUT US
+            <i class="fas fa-chevron-down" v-if="!showInfo"></i>
+            <i class="fas fa-chevron-up" v-else></i>
+          </p>
+          <div v-if="showInfo" id="sh">
+            <p class="contact">Contact</p>
+            <p class="tou">Terms of use</p>
+            <p class="rp">Return policy</p>
+            <p class="pp">Privacy Policy</p>
+          </div>
+        </div>
+         <div class="followPhone">
+          <p class="followw" @click="showFollow = !showFollow" style="cursor: pointer; user-select: none;">
+            FOLLOW US
+            <i class="fas fa-chevron-down" v-if="!showFollow"></i>
+            <i class="fas fa-chevron-up" v-else></i>
+          </p>
+          <div v-if="showFollow" id="sf">
+           <a class="ig" href="https://www.instagram.com/raserv_org" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a><br />
+  <a class="ig" href="https://www.facebook.com/raserv_org" target="_blank">
+    <i class="fab fa-facebook"></i> Facebook
+  </a>
+          </div>
+        </div>
+
+        <div class="ab">
+          <p class="about">ABOUT US</p>
+          <p class="contact">Contact</p>
+          <p class="tou">Terms of use</p>
+          <p class="rp">Return policy</p>
+          <p class="pp">Privacy Policy</p>
+        </div>
+
+        <div class="ab">
+          <p class="follow">FOLLOW US</p>
+          <div style="margin-top: 30px;">
+            <a class="ig" href="https://www.instagram.com/raserv_org" target="_blank">Instagram</a><br />
+          </div>
+          <div style="margin-top: 10px;">
+            <a class="ig" href="https://www.facebook.com/raserv_org" target="_blank">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</template>
+
+
+<style scoped>
+@media (min-width: 1741px) and (max-width: 2200px) {
+  .partner1 {
+    margin-left: 16% !important;
+  }
+
+  .email {
+    margin-left: -56.7% !important;
+  }
+
+  .p2 {
+    margin-left: -50.3% !important;
+  }
+
+  .p1 {
+    margin-left: -52.3% !important;
+  }
+
+  .loc {
+    margin-left: -51.2% !important;
+  }
+
+  .pib {
+
+    margin-left: -57.2% !important;
+
+  }
+
+  .info {
+    margin-left: -51.5% !important;
+    margin-top: -50px;
+  }
+
+  .logo {
+    margin-top: -5px !important;
+    margin-left: -56% !important;
+  }
+
+  .ig {
+    margin-left: 650px !important;
+  }
+
+  .follow {
+    margin-left: 670px !important;
+  }
+
+  .pp {
+    margin-left: 65px !important;
+  }
+
+  .rp {
+    margin-left: 65px !important;
+  }
+
+  .tou {
+    margin-top: 10px;
+    margin-left: 65px !important;
+  }
+
+  .contact {
+    margin-top: 30px;
+    margin-left: 35px !important;
+
+  }
+
+  .about {
+    margin-left: 60px !important;
+  }
+
+  .yea {
+    margin-left: 35% !important;
+    width: 25% !important;
+  }
+
+  .page {
+    height: 93vh !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .page {
+    height: 170vh !important;
+  }
+  .partners {
+    margin-top: -250px !important;
+  }
+  #sh {
+    margin-left: -120% !important;
+    margin-top: -3% !important;
+  }
+  .about {
+    margin-top: 8% !important;
+    margin-left: -65% !important;
+  }
+  .email {
+    margin-left: -55% !important;
+  }
+
+  .p2 {
+    margin-left: -27% !important;
+  }
+
+  .p1 {
+    margin-left: -37% !important;
+  }
+
+  .footer {
+    height: 80vh !important;
+  }
+
+  .logo {
+    margin-left: -55% !important;
+  }
+
+  .pib {
+    margin-left: -59% !important;
+  }
+  .ab {
+    display: none;
+  }
+  .aboutPhone,
+  .followPhone {
+    display: block !important;
+  }
+  .partner1 {
+    margin-left: -8.5% !important;
+    margin-top: -150px !important;
+    height: 250px !important;
+    width: 60% !important;
+  }
+  .partner2 {
+    margin-left: -10% !important;
+    width: 65% !important;
+    margin-top: -100px !important;
+  }
+  .partner3 {
+  margin-top: 2% !important;
+  width: 45% !important;
+  height: 87px !important;
+  margin-left: -107% !important;
+}
+.partner4 {
+  height: 45px !important;
+  margin-top: 8% !important;
+  width: 48% !important;
+  margin-left: 5% !important;
+}
+.ne {
+  margin-top: 70% !important;
+}
+.sub {
+  font-size: 28px !important;
+}
+.yea {
+  width: 65% !important;
+  margin-left: 3% !important;
+  margin-top: 5% !important;
+}
+.join {
+  width: 23% !important;
+}
+.notification {
+  margin-top: 5% !important;
+}
+
+
+}
+#sf {
+  margin-left: -71%;
+  margin-top: -3%;
+}
+.followw {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: -62%;
+}
+.aboutPhone,
+.followPhone {
+  display: none;
+}
+.notification {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.privacy {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.join {
+  height: 43px;
+  padding: 5px;
+  width: 5%;
+  margin-left: 10px;
+  border: none;
+  background-color: rgb(97, 177, 17);
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.yea {
+  height: 30px;
+  margin-left: 40%;
+  padding: 5px;
+  width: 15%;
+}
+
+.sub {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ig {
+  margin-left: 880px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #868686;
+  text-decoration: none;
+}
+
+.follow {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: -170px;
+  margin-left: 900px;
+}
+
+.pp {
+  margin-left: 210px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  color: #868686;
+}
+
+.rp {
+  margin-left: 205px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  color: #868686;
+}
+
+.tou {
+  margin-left: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  color: #868686;
+}
+
+.contact {
+  margin-left: 170px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+  color: #868686;
+}
+
+.about {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: -270px;
+  margin-left: 190px;
+}
+
+.email {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -35.2%;
+  margin-top: 0px;
+  color: #868686;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -30.5%;
+  margin-top: 0px;
+  color: #868686;
+}
+
+.p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -32.3%;
+  margin-top: 0px;
+  color: #868686;
+}
+
+.loc {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -31.5%;
+  margin-top: 0px;
+  color: #868686;
+}
+
+.pib {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -37.2%;
+  margin-top: 0px;
+  color: #868686;
+}
+
+.info {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: -33%;
+  margin-top: -50px;
+  color: #868686;
+}
+
+.logo {
+  height: 180px;
+  margin-left: -36%;
+}
+
+.partner4 {
+  margin-top: 15px;
+  width: 250px;
+  height: 55px;
+  margin-left: 3%;
+}
+
+.partner3 {
+  margin-top: 3px;
+  width: 250px;
+  height: 80px;
+  margin-left: 3%;
+}
+
+.partner2 {
+  margin-top: -30px;
+  width: 250px;
+  height: 150px;
+  margin-left: 2%;
+}
+
+.partner1 {
+  margin-top: -65px;
+  width: 220px;
+  margin-left: 27%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.partners {
+  height: 90px;
+  padding: 10px;
+}
+
+.footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  height: 350px;
+  border-top: 1px solid #ffffff;
+}
+</style>

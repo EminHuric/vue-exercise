@@ -798,7 +798,8 @@ function showMenu() {
   border: 1px solid rgb(221, 221, 221);
   height: 100px;
   background-color: white;
-  position: absolute;
+  position: fixed;
+  z-index: 999;
   width: 100%;
   left: 0px;
   top: 45px;

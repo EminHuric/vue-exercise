@@ -1,9 +1,11 @@
 <script setup>
+import Footer from '../components/footer.vue'
+
 </script>
 
 <template>
   <div class="s">
-    <h1 class="gwh"></h1>
+    <h1 class="gwh">🎁 PRIZE GAME 🎁</h1>
     <p class="notification">To participate in the prize game, your order total must exceed €100.
       After completing your purchase, your participation becomes valid only
       after you fill out a short <a href="#survey">SURVEY</a> located at the bottom of this page.
@@ -67,27 +69,46 @@
 
 
 <style scoped>
-@media (min-width: 1921px) {
+@media (min-width: 1741px) and (max-width: 2200px) {
+  .s {
+    top: 23.3% !important;
+  }
   .notification {
-    margin-left: 25% !important;
-    margin-right: 25% !important;
+    margin-left: 18% !important;
+    margin-right: 18% !important;
     font-size: 18px !important;
   }
 
   .gwPhoto {
-    margin-left: 25% !important;
-    width: 50% !important;
+    margin-left: 18% !important;
+    width: 65% !important;
+    margin-top: 1% !important;
+    margin-bottom: 1% !important;
   }
 
   .gwh {
     font-size: 60px !important;
   }
-
-  /* Dodaj još elemenata ako želiš da ih proširiš ili centiraš više */
+  .date, .label1 {
+    margin-left: 165% !important;
+    width: 80% !important;
+  }
+  .surveyFrame {
+    width: 45% !important;
+    margin-left: 27% !important;
+  }
+  .name,
+  .email,
+  #countryCode{
+    margin-left: 10% !important;
+  }
+  .id, .label {
+    margin-left: 30% !important;
+  }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) and (max-width: 1740px) {
   .s {
-    top: 18.1% !important;
+    top: 19% !important;
   }
 
   .notification {
@@ -101,11 +122,22 @@
     width: 85%;
     margin-top: 20px !important;
   }
+  .surveyFrame {
+    margin-left: 20% !important;
+    width: 60% !important;
+    margin-right: 20% !important;
+  }
+  .date {
+    margin-left: 155% !important;
+  }
+  .label1 {
+    margin-left: 155% !important;
+  }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   .s {
     position: absolute;
-    top: 18.1% !important;
+    top: 19% !important;
   }
   .surveyFrame {
     margin-left: 10% !important;
@@ -165,6 +197,75 @@
   }
   .s {
     margin-top: -7.8% !important;
+  }
+}
+@media (min-width: 421px) and (max-width: 767px) {
+  .sendButton {
+    margin-top: 30px !important;
+  }
+  .name, .email {
+    width: 85% !important;
+    margin-left: 5% !important;
+  }
+  .surveyFrame {
+    width: 96% !important;
+    margin: 2% !important;
+  }
+  #countryCode {
+    margin-left: 5% !important;
+    width: 20% !important;
+    height: 8.6% !important;
+  }
+  #phoneNumber {
+    width: 65% !important;
+    height: 7.5% !important;
+    margin-left: -2px !important;
+  }
+  .label {
+    margin-left: 80% !important;
+    width: 100%;
+    margin-top: 15px !important;
+  }
+  .date {
+    width: 80% !important;
+    margin-left: -45% !important;
+
+  }
+  .label1 {
+    margin-top: 150px !important;
+    width: 100000% !important;
+    margin-left: -40% !important;
+  }
+  .id {
+    margin-left: 55% !important;
+    width: 80% !important;
+    height: 51px !important;
+    margin-top: -2px !important;
+  }
+  .gwPhoto {
+    display: none !important;
+  }
+
+  .gwPhoto2 {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+
+  .gwh {
+    font-size: 38px !important;
+    margin-top: 20px !important;
+  }
+
+  .notification {
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+    font-size: 14px !important;
+    text-align: justify !important;
+  }
+
+  .s {
+    top: 9.5% !important;
   }
 }
 @media (max-width: 420px) {
@@ -392,12 +493,11 @@
 
 .s {
   border: 1px solid black;
-  height: 100vh;
   width: 100%;
   background-color: rgb(255, 255, 255);
   position: absolute;
   left: 0;
-  top: 15.8%;
+  top: 16.6%;
   border: none;
 }
 </style>
