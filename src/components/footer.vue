@@ -188,7 +188,361 @@ onMounted(() => {
     height: 93vh !important;
   }
 }
+@media (min-width: 1281px) and (max-width: 1701px) {
+  .partners {
+    margin-left: -25% !important;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .partners {
+    margin-left: -37% !important;
+  }
+  .partner2 {
+    margin-left: -3% !important;
+  }
+  .partner3 {
+    margin-left: 1% !important;
+  }
+  .partner4 {
+    height: 40px !important;
+    margin-top: 2% !important;
+  }
+  .logo {
+    margin-left: -75% !important;
+    margin-top: -4% !important;
+  }
+  .info {
+    margin-left: -67% !important;
+  }
+  .pib {
+    margin-left: -75% !important;
+  }
+  .loc {
+    margin-left: -63% !important;
+  }
+  .p1 {
+    margin-left: -66% !important;
+  }
+  .p2 {
+    margin-left: -61% !important;
+  }
+  .email {
+    margin-left: -75% !important;
+  }
+  .about {
+    margin-left: 11% !important;
+  }
+  .contact {
+    margin-left: 9% !important;
+  }
+  .tou {
+    margin-left: 12% !important;
+  }
+  .rp {
+    margin-left: 12.5% !important;
+  }
+  .pp {
+    margin-left: 13% !important;
+  }
+  .follow {
+    margin-left: 65% !important;
+    
+  }
+  .ig {
+    margin-left: 62% !important;
+  }
+  .sub {
+    margin-top: -10% !important;
+  }
+  #email {
+    width: 44% !important;
+    margin-left: 22% !important;
+    margin-top: 2% !important;
+  }
+  .join {
+    width: 10% !important;
+  }
+  .notification {
+    margin-top: 5% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .partners {
+    margin-left: -40% !important;
+  }
+  .partner2 {
+    margin-left: -3% !important;
+  }
+  .partner3 {
+    margin-left: 1% !important;
+  }
+  .partner4 {
+    height: 40px !important;
+    margin-top: 2% !important;
+  }
+  .logo {
+    margin-left: -75% !important;
+    margin-top: -4% !important;
+  }
+  .info {
+    margin-left: -67% !important;
+  }
+  .pib {
+    margin-left: -75% !important;
+  }
+  .loc {
+    margin-left: -63% !important;
+  }
+  .p1 {
+    margin-left: -66% !important;
+  }
+  .p2 {
+    margin-left: -61% !important;
+  }
+  .email {
+    margin-left: -75% !important;
+  }
+  .about {
+    margin-left: 11% !important;
+  }
+  .contact {
+    margin-left: 9% !important;
+  }
+  .tou {
+    margin-left: 12% !important;
+  }
+  .rp {
+    margin-left: 12.5% !important;
+  }
+  .pp {
+    margin-left: 13% !important;
+  }
+  .follow {
+    margin-left: 65% !important;
+  }
+  .ig {
+    margin-left: 62% !important;
+  }
+  .sub {
+    margin-top: -10% !important;
+  }
+  #email {
+    width: 44% !important;
+    margin-left: 22% !important;
+    margin-top: 2% !important;
+  }
+  .join {
+    width: 10% !important;
+  }
+  .notification {
+    margin-top: 5% !important;
+  }
+}
+@media (min-width: 601px) and (max-width: 767px) {
+  .page {
+    height: 150vh !important;
+  }
+  .partners {
+    margin-top: -250px !important;
+  }
+  #sf {
+    margin-left: -180% !important;
+    margin-top: 1% !important;
+  }
+  #sh {
+    margin-left: -1221% !important;
+    margin-top: 0% !important;
+  }
+  .about {
+    margin-top: 0% !important;
+    margin-left: 20% !important;
+  }
+  .email {
+    margin-left: -75% !important;
+  }
 
+  .p2 {
+    margin-left: -57% !important;
+  }
+
+  .p1 {
+    margin-left: -63% !important;
+  }
+  .follow {
+    margin-left: 67% !important;
+    margin-top: 17.5% !important;
+  }
+  .ig {
+    margin-left: 62% !important;
+  }
+  .footer {
+    height: 80vh !important;
+  }
+
+  .logo {
+    margin-left: -75% !important;
+  }
+  .info {
+    margin-left: -65% !important;
+  }
+  .pib {
+    margin-left: -75% !important;
+  }
+  .loc {
+    margin-left: -60% !important;
+  }
+  .ab {
+    display: block;
+    margin-top: -42% !important;
+    margin-left: 5% !important;
+  }
+  .contact {
+    margin-left: 16% !important;
+  }
+  .tou {
+    margin-left: 21% !important;
+  }
+  .rp {
+    margin-left: 22% !important;
+  }
+  .pp {
+    margin-left: 23% !important;
+  }
+  .partner1 {
+    margin-left: 2.5% !important;
+    margin-top: -150px !important;
+    height: 250px !important;
+    width: 45% !important;
+  }
+  .partner2 {
+    margin-left: -0% !important;
+    width: 50% !important;
+    margin-top: -100px !important;
+  }
+  .partner3 {
+  margin-top: 2% !important;
+  width: 35% !important;
+  height: 87px !important;
+  margin-left: -90% !important;
+}
+.partner4 {
+  height: 45px !important;
+  margin-top: 5% !important;
+  width: 40% !important;
+  margin-left: 11% !important;
+}
+.ne {
+  margin-top: 70% !important;
+}
+.sub {
+  font-size: 28px !important;
+  margin-top: -45% !important;
+}
+.yea {
+  width: 45% !important;
+  margin-left: 20% !important;
+  margin-top: 5% !important;
+}
+.join {
+  width: 15% !important;
+}
+.notification {
+  margin-top: 5% !important;
+}
+
+}
+@media (min-width: 421px) and (max-width: 600px) {
+  .page {
+    height: 170vh !important;
+  }
+  .partners {
+    margin-top: -250px !important;
+  }
+  #sf {
+    margin-left: -180% !important;
+    margin-top: 1% !important;
+  }
+  #sh {
+    margin-left: -91% !important;
+    margin-top: 0% !important;
+  }
+  .about {
+    margin-top: 8% !important;
+    margin-left: -65% !important;
+  }
+  .email {
+    margin-left: -55% !important;
+  }
+
+  .p2 {
+    margin-left: -27% !important;
+  }
+
+  .p1 {
+    margin-left: -37% !important;
+  }
+
+  .footer {
+    height: 80vh !important;
+  }
+
+  .logo {
+    margin-left: -55% !important;
+  }
+
+  .pib {
+    margin-left: -59% !important;
+  }
+  .ab {
+    display: none;
+  }
+  .aboutPhone,
+  .followPhone {
+    display: block !important;
+  }
+  .partner1 {
+    margin-left: -8.5% !important;
+    margin-top: -150px !important;
+    height: 250px !important;
+    width: 60% !important;
+  }
+  .partner2 {
+    margin-left: -10% !important;
+    width: 65% !important;
+    margin-top: -100px !important;
+  }
+  .partner3 {
+  margin-top: 2% !important;
+  width: 45% !important;
+  height: 87px !important;
+  margin-left: -107% !important;
+}
+.partner4 {
+  height: 45px !important;
+  margin-top: 8% !important;
+  width: 48% !important;
+  margin-left: 5% !important;
+}
+.ne {
+  margin-top: 70% !important;
+}
+.sub {
+  font-size: 28px !important;
+}
+.yea {
+  width: 65% !important;
+  margin-left: 3% !important;
+  margin-top: 5% !important;
+}
+.join {
+  width: 23% !important;
+}
+.notification {
+  margin-top: 5% !important;
+}
+
+
+}
 @media (max-width: 420px) {
   .page {
     height: 170vh !important;

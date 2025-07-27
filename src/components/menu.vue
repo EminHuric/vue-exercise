@@ -48,7 +48,7 @@
   <Mm />
 
 
-  <button class="menuT" style="margin-top: -95px; position: relative; display: none;" @click="showMenu"><i
+  <button class="menuT" style="top: 0; position: relative; display: none;" @click="showMenu"><i
       class="fa-solid fa-bars"></i></button>
   <div v-if="menu2" class="overlay" @click="menu2 = false">
     <div class="menu2" @click.stop>
@@ -287,7 +287,9 @@ function showMenu() {
     background: none;
     border: none;
     font-size: 20px;
-    margin-top: 57px !important;
+    top: 6% !important;
+    position: fixed !important;
+    z-index: 999;
   }
   .menu2 {
     width: 79% !important;
@@ -376,7 +378,10 @@ function showMenu() {
     background: none;
     border: none;
     font-size: 20px;
-    margin-top: 57px !important;
+    top: 6.2% !important;
+    position: fixed !important;
+    z-index: 999;
+    margin-left: 2% !important;
   }
 
   .menu2 {
@@ -679,7 +684,7 @@ function showMenu() {
     border: 1px solid rgb(221, 221, 221);
     height: 55px;
     background-color: white;
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0;
     top: 45px;
