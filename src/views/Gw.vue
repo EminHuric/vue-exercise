@@ -106,7 +106,15 @@ import Footer from '../components/footer.vue'
     margin-left: 30% !important;
   }
 }
-@media (min-width: 1280px) and (max-width: 1740px) {
+@media (min-width: 1501px) and (max-width: 1740px) {
+  .s {
+    top: 17% !important;
+  }
+  .date {
+    margin-left: 155% !important;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1500px) {
   .s {
     top: 19% !important;
   }

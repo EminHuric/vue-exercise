@@ -29,7 +29,7 @@
     <div class="container">
       <img class="logo" src="/logo1.png" alt="logo" />
 
-      <div class="bagT"><i class="fa-solid fa-bag-shopping"></i></div>
+      <div class="bagT" @click="showBasket"><i class="fa-solid fa-bag-shopping"></i></div>
 
       <input placeholder="Search products" class="search" />
       <button id="searchLogo"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -40,7 +40,25 @@
       <p class="sr">SIGN IN / REGISTER</p>
       <div class="favoriteLogo">
         <span class="fv"><i class="far fa-heart"></i></span>
-        <div class="bag"><i class="fa-solid fa-bag-shopping"></i></div>
+        <div class="bag" @click="showBasket"><i class="fa-solid fa-bag-shopping"></i></div>
+        <div v-if="basket" class="overlay" @click="basket = false">
+          <div class="basket">
+            <div class="border1">
+              <p class="basketTitle">Cart</p>
+              <p class="close"><i class="fa-solid fa-xmark"></i> Close</p>
+            </div>
+            <div style="margin-top: 10%;">
+              <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <div class="xmark">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </div>
+              <p class="notification">There are no products in your cart.</p>
+              <router-link to="/shop"><button class="storeButton">STORE</button></router-link>
+            </div>
+          </div> 
+        </div>
       </div>
     </div>
   </nav>
@@ -106,10 +124,14 @@ import Welcome from './welcome.vue'
 import Mm from './mainMenu.vue'
 
 const menu2 = ref(false)
+const basket = ref(false)
 const activeTab = ref('menu')
 
 function showMenu() {
   menu2.value = !menu2.value
+}
+function showBasket() {
+  basket.value = !basket.value
 }
 </script>
 
@@ -136,6 +158,80 @@ function showMenu() {
 .favoriteLogo {
   transform: translateX(270px);
 }
+}
+@media (min-width: 1741px) and (max-width: 2200px) {
+  .storeButton {
+  margin-left: 35% !important;
+  margin-top: 10% !important;
+  height: 40px !important;
+  width: 30% !important;
+  
+}
+.xmark {
+  margin-left: 140px !important;
+}
+.basketTitle, .close {
+  top: 0% !important;
+}
+}
+
+.storeButton {
+  margin-left: 30%;
+  background-color: rgb(101, 179, 24);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10%;
+}
+.notification {
+  text-align: center;
+  margin-top: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.xmark {
+  margin-top: -150px;
+  font-size: 50px;
+  margin-left: 185px;
+  color: #ffffff;
+}
+.cart {
+  text-align: center;
+  font-size: 150px;
+  color: #aaaaaa;
+  margin-left: -20px;
+}
+.basketTitle {
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.close {
+  position: absolute;
+  right: 8%;
+  top: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.border1 {
+  border: 1px solid rgb(170, 170, 170);
+  height: 7%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.basket {
+  border: 1px solid black;
+  position: absolute;
+  height: 100vh;
+  width: 18%;
+  right: 0;
+  background-color: white;
 }
 .gd {
   margin-left: 10px;
@@ -215,6 +311,20 @@ function showMenu() {
 }
 
 @media (min-width: 1024px) and (max-width: 1709px) {
+  .xmark {
+    margin-left: 10px !important;
+    text-align: center;
+  }
+  .cart {
+    margin-left: -10px !important;
+  }
+  .basketTitle, .close {
+    margin-top: 3% !important;
+  }
+  .basket {
+    width: 30% !important;
+    z-index: -9999;
+  }
   .logo {
     margin-left: 5px !important;
   }
@@ -346,8 +456,37 @@ function showMenu() {
   .m6 {
     width: 53.7%;
   }
+
+  .xmark {
+    margin-left: 10px !important;
+    text-align: center;
+  }
+  .cart {
+    margin-left: -10px !important;
+  }
+  .basketTitle, .close {
+    margin-top: 3% !important;
+  }
+  .basket {
+    width: 70% !important;
+  }
 }
+
 @media (max-width: 420px) {
+
+
+  .xmark {
+    margin-left: 140px !important;
+  }
+  .cart {
+    margin-left: -10px !important;
+  }
+  .basketTitle, .close {
+    margin-top: 3% !important;
+  }
+  .basket {
+    width: 80% !important;
+  }
 
   .search,
   .category,
@@ -378,7 +517,7 @@ function showMenu() {
     background: none;
     border: none;
     font-size: 20px;
-    top: 6.2% !important;
+    top: 56px !important;
     position: fixed !important;
     z-index: 999;
     margin-left: 2% !important;
@@ -606,6 +745,23 @@ function showMenu() {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+
+  .xmark {
+    margin-left: 10px !important;
+    text-align: center;
+  }
+  .cart {
+    margin-left: -10px !important;
+  }
+  .basketTitle, .close {
+    margin-top: 3% !important;
+  }
+  .basket {
+    width: 40% !important;
+  }
+
+
   .m1 {
     padding-right: 90.5%;
   }
@@ -699,13 +855,15 @@ function showMenu() {
     margin-top: -75px;
     margin-left: 42%;
   }
-
+  .favoriteLogo {
+  display: block;
+  margin-top: -10000000px !important;
+}
   .search,
   #searchLogo,
   .category,
   .user,
   .sr,
-  .favoriteLogo,
   .bag {
     display: none;
   }
@@ -721,14 +879,14 @@ function showMenu() {
 
 .bag {
   margin-top: -27px;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .favoriteLogo {
   color: rgb(0, 0, 0);
   font-size: 20px;
   margin-top: 38px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .sr {
@@ -739,7 +897,7 @@ function showMenu() {
 }
 
 .user {
-  margin-left: 90px;
+  margin-left: 80px;
   color: black;
   font-size: 24px;
   margin-top: 38px;

@@ -221,7 +221,7 @@
     padding: 10px 0;
     margin: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 99;
 }
 
 
@@ -305,6 +305,6 @@ ul a {
     top: 145px;
     border-left: none;
     border-right: none;
-    z-index: 9999;
+    z-index: 99;
 }
 </style>

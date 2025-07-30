@@ -40,7 +40,95 @@
 @media (min-width: 1741px) and (max-width: 2200px) {
     .f1 {
         margin-left: 17% !important;
+        width: 20% !important;
+    }
+}
+@media (min-width: 1281px) and (max-width: 1740px) {
+    .f1 {
+        margin-left: 19% !important;
+    }
+    .f3 {
+        margin-right: 19% !important;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .f1 {
+        margin-left: 10%  !important;
+    }
+    .f3 {
+        margin-right: 10% !important;
+    }
+    .why {
+        margin-top: 20% !important;
+        margin-bottom: 10% !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .f1 {
+        margin-left: 2% !important;
+    }
+    .why {
+        margin-top: 20% !important;
+        margin-bottom: 10% !important;
+    }
+}
+@media (min-width: 601px) and (max-width: 767px) {
+.f1 {
         width: 100% !important;
+        width: 1000000% !important;
+        margin-top: 0% !important;
+        margin-right: 10% !important;
+        margin-left: 5% !important;
+    }
+    .h1 {
+        margin-top: 110% !important;
+        font-size: 35px !important;
+    }
+   
+    .f2 {
+        margin-top: 40% !important;
+        width: 1000000% !important;
+        margin-left: -100% !important;
+        margin-right: -20% !important;
+    }
+    .f3 {
+        margin-top: 80% !important;
+        width: 1000000% !important;
+        margin-left: -70% !important;
+        margin-right: 5% !important;
+    }
+    .why {
+        margin-bottom: -20% !important;
+        margin-top: -80% !important;
+    }
+}
+@media (min-width: 421px) and (max-width: 600px) {
+    .f1 {
+        width: 100% !important;
+        width: 1000000% !important;
+        margin-top: 10% !important;
+        margin-right: 10% !important;
+        margin-left: 5% !important;
+    }
+    .h1 {
+        margin-top: 110% !important;
+        font-size: 35px !important;
+    }
+   
+    .f2 {
+        margin-top: 80% !important;
+        width: 1000000% !important;
+        margin-left: -100% !important;
+        margin-right: -20% !important;
+    }
+    .f3 {
+        margin-top: 150% !important;
+        width: 1000000% !important;
+        margin-left: -70% !important;
+        margin-right: 5% !important;
+    }
+    .why {
+        margin-bottom: -75% !important;
     }
 }
 @media (max-width: 420px) {
@@ -54,6 +142,7 @@
     .h1 {
         margin-top: 150% !important;
         font-size: 35px !important;
+        text-align: center;
     }
    
     .f2 {

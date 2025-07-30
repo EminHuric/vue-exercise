@@ -5,13 +5,16 @@ import FamilyCard from '../views/FamilyCard.vue'
 import Contact from '../views/Contact.vue'
 import Catalog from '../views/Catalog.vue'
 import Gw from '../views/Gw.vue'
+import Favorite from '../views/Favorite.vue'
+
 
 const routes = [
   { path: '/shop', name: 'Shop', component: Shop },
   { path: '/family-card', name: 'FamilyCard', component: FamilyCard },
   { path: '/contact', name: 'Contact', component: Contact },
   { path: '/catalog', name: 'Catalog', component: Catalog },
-  { path: '/gw', name:'Gw', component: Gw}
+  { path: '/gw', name:'Gw', component: Gw},
+   { path: '/favorite', name: 'Favorite', component: Favorite }
 ]
 
 const router = createRouter({

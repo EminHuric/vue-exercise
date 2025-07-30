@@ -19,6 +19,9 @@
     margin-left: 0 !important;
     margin-top: 2% !important;
   }
+  .gwFrame {
+    margin-top: 10% !important;
+  }
 }
 @media (min-width: 1280px) and (max-width: 1500px) {
   .cta {
