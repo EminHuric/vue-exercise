@@ -62,7 +62,6 @@ import Footer from '../components/footer.vue'
       </form>
     </div>
     <div style="margin-top: 500px;">
-      ggg
     </div>
   </div>
 </template>
@@ -331,7 +330,7 @@ import Footer from '../components/footer.vue'
 
   .gwh {
     font-size: 38px !important;
-    margin-top: 20px !important;
+    margin-top: 50px !important;
   }
 
   .notification {
@@ -502,6 +501,7 @@ import Footer from '../components/footer.vue'
 .s {
   border: 1px solid black;
   width: 100%;
+  height: 230%;
   background-color: rgb(255, 255, 255);
   position: absolute;
   left: 0;

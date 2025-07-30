@@ -104,7 +104,7 @@
     margin-top: 22% !important;
   }
   .gwFrame {
-    height: 20% !important;
+    height: 80% !important;
   }
 }
 
@@ -127,5 +127,6 @@
   height: 620px;
   margin-left: 210px;
   position: relative;
+  z-index: 9999;
 }
 </style>
