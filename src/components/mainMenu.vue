@@ -221,7 +221,7 @@
     padding: 10px 0;
     margin: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 999;
 }
 
 
