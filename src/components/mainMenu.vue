@@ -100,7 +100,7 @@
     }
 
     .main-menu {
-        margin-left: 0px !important;
+        margin-left: -50px !important;
     }
 
     .menu-item,
