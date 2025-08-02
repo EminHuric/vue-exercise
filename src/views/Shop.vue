@@ -16,6 +16,33 @@ export default {
   .shopBg {   
   height: 190% !important;  
 }
+.shopTitle {
+  top: -18% !important;
+}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .shopBg {
+    top: 8% !important;
+  }
+  .shopTitle {
+    top: -22% !important;
+  }
+}
+@media (min-width: 421px) and (max-width: 767px) {
+  .shopTitle {
+  top: -10% !important; 
+}
+.shopBg {
+  position: absolute; 
+  top: 6.5% !important;
+  left: 0 !important;
+  width: 100vw;    
+  height: 300% !important;  
+}
+.photo {
+  height: 10% !important;
+}
+
 }
 @media (max-width: 420px) {
   .shopBg {
@@ -29,8 +56,7 @@ export default {
   height: 10% !important;
 }
 .shopTitle {
-  color: rgb(255, 255, 255) !important;
-  margin-top: 85% !important;
+  top: -10% !important; 
 }
 }
 .shopTitle {
@@ -61,7 +87,7 @@ html, body, #app {
 
 .photo {
   width: 100%;
-  height: 20%;
+  height: 300px;
   margin-top: 0%;
   object-fit: cover; 
   display: block;
