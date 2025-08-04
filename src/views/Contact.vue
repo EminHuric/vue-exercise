@@ -60,14 +60,101 @@ export default {
 .shopTitle {
   top: -18% !important;
 }
+.paragraph {
+  width: 30% !important;
+}
+#email {
+  width: 110% !important;
+  margin-left: -20px !important;
+}
+#fullname {
+  width: 100% !important;
+}
+.ea {
+  margin-left: -20px !important;
+}
+#contactForm {
+  margin-top: -17% !important;
+}
+}
+@media (min-width: 1025px) and (max-width: 1709px) {
+  .map iframe {
+  margin-left: 1% !important;
+  width: 97% !important;
+}
+.thanks {
+    width: 44% !important;
+  }
+  .paragraph {
+    width: 44% !important;
+  }
+  #contactForm {
+    margin-left: 50% !important;
+    margin-top: -20% !important;
+  }
+  #fullname {
+    width: 90% !important;
+  }
+  #email {
+    width: 110% !important;
+    margin-left: -35px !important;
+  }
+  #message {
+    width: 92% !important;
+  }
+  .send {
+    width: 30% !important;
+  }
+  .ea {
+    margin-left: -30px !important;
+  }
+  .contact {
+  margin-left: 2% !important;
+  margin-top: 8% !important;
+}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .map iframe {
+  margin-left: 1% !important;
+  width: 97% !important;
+}
+.contact {
+  margin-left: 2% !important;
+}
+
   .shopBg {
     top: 8% !important;
     height: 200% !important;
   }
   .shopTitle {
     top: -20% !important;
+  }
+  .thanks {
+    width: 44% !important;
+  }
+  .paragraph {
+    width: 44% !important;
+  }
+  #contactForm {
+    margin-left: 50% !important;
+    margin-top: -32% !important;
+  }
+  #fullname {
+    width: 90% !important;
+  }
+  #email {
+    width: 110% !important;
+    margin-left: -35px !important;
+  }
+  #message {
+    width: 92% !important;
+  }
+  .send {
+    width: 30% !important;
+  }
+  .ea {
+    margin-left: -30px !important;
   }
 }
 @media (min-width: 421px) and (max-width: 767px) {

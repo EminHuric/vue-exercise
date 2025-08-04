@@ -1,5 +1,7 @@
 <script setup>
-
+function showBasket() {
+    basket.value = !basket.value
+}
 </script>
 
 <template>
@@ -13,10 +15,11 @@
                 <span class="navLogo1"><i class="far fa-heart"></i></span><br>
                 <span class="navName1">Favorite</span>
             </router-link>
-            <a href="#" class="bag">
+            <a href="#" class="bag" @click="showBasket">
                 <span class="navLogo2"><i class="fa-solid fa-bag-shopping bagIcon"></i></span><br>
-                <span class="navName2">Favorite</span>
+                <span class="navName2">Basket</span>
             </a>
+
             <a href="#" class="acc">
                 <span class="navLogo3"><i class="fa-regular fa-user"></i></span><br>
                 <span class="navName3">Account</span>
@@ -29,13 +32,15 @@
 .navBar {
     display: none;
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .navBar {
         justify-content: center;
         text-align: center;
-        justify-self:center;
+        justify-self: center;
         display: block;
     }
+
     .navLogo3 {
         position: absolute;
         top: 10px;
@@ -53,12 +58,15 @@
         color: #2e2c2c;
 
     }
+
     .acc {
         margin-left: 9900px;
     }
+
     .bag {
         margin-left: 500px;
     }
+
     .navLogo2 {
         position: absolute;
         top: 10px;
@@ -76,6 +84,7 @@
         color: #2e2c2c;
 
     }
+
     .navLogo1 {
         position: absolute;
         top: 10px;
@@ -123,6 +132,7 @@
         display: block;
     }
 }
+
 @media (min-width: 601px) and (max-width: 767px) {
     .navBar {
         border: 1px solid rgb(255, 255, 255);
@@ -137,6 +147,7 @@
         display: block;
         padding-bottom: env(safe-area-inset-bottom);
     }
+
     .navLogo1 {
         position: absolute;
         top: 10px;
@@ -170,6 +181,7 @@
         font-size: 14px;
         color: #2e2c2c;
     }
+
     .navLogo3 {
         position: absolute;
         top: 10px;
@@ -187,7 +199,7 @@
         color: #2e2c2c;
 
     }
-    
+
     .navLogo2 {
         position: absolute;
         top: 10px;
@@ -207,6 +219,7 @@
     }
 
 }
+
 @media (min-width: 421px) and (max-width: 600px) {
     .navBar {
         border: 1px solid rgb(255, 255, 255);
@@ -221,6 +234,7 @@
         display: block;
         padding-bottom: env(safe-area-inset-bottom);
     }
+
     .navLogo1 {
         position: absolute;
         top: 10px;
@@ -254,6 +268,7 @@
         font-size: 14px;
         color: #2e2c2c;
     }
+
     .navLogo3 {
         position: absolute;
         top: 10px;
@@ -271,7 +286,7 @@
         color: #2e2c2c;
 
     }
-    
+
     .navLogo2 {
         position: absolute;
         top: 10px;
@@ -292,6 +307,7 @@
 
 
 }
+
 @media (max-width: 420px) {
     .navBar {
         border: 1px solid rgb(255, 255, 255);
@@ -306,6 +322,7 @@
         display: block;
         padding-bottom: env(safe-area-inset-bottom);
     }
+
     .navLogo1 {
         position: absolute;
         top: 10px;
@@ -339,6 +356,7 @@
         font-size: 14px;
         color: #2e2c2c;
     }
+
     .navLogo3 {
         position: absolute;
         top: 10px;
@@ -356,7 +374,7 @@
         color: #2e2c2c;
 
     }
-    
+
     .navLogo2 {
         position: absolute;
         top: 10px;
@@ -377,5 +395,4 @@
 
 
 }
-
 </style>

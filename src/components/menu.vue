@@ -38,8 +38,11 @@
       </div>
       <p class="user"><i class="fa-regular fa-user"></i></p>
       <p class="sr">SIGN IN / REGISTER</p>
+      
       <div class="favoriteLogo">
+        <router-link to="/favorite">
         <span class="fv"><i class="far fa-heart"></i></span>
+        </router-link>
         <div class="bag" @click="showBasket"><i class="fa-solid fa-bag-shopping"></i></div>
         <div v-if="basket" class="overlay" @click="basket = false">
           <div class="basket">
