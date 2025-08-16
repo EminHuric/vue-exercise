@@ -10,24 +10,18 @@
     <router-link to="/shop">
       <button class="store">Store</button>
     </router-link>
+    <MainFooter />
   </div>
 </template>
 
-<script>
-export default {
-  name: "Favorite",
-};
+<script setup>
+import MainFooter from '../components/mainFooter.vue'
 </script>
 
 <style scoped>
 
 @media (min-width: 1741px) and (max-width: 2200px) {
-  .shopBg {   
-  height: 190% !important;  
-}
-.shopTitle {
-  top: -18% !important;
-}
+  
 }
 @media (min-width: 1025px) and (max-width: 1701px) {
   .store {
@@ -49,9 +43,9 @@ export default {
   .shopBg {
     top: 8% !important;
   }
-  .shopTitle {
-    top: -22% !important;
-  }
+  .subtitle {
+  margin-top: -12% !important;
+}
   .store {
   width: 30% !important;
   margin-left: 35% !important;
@@ -162,7 +156,7 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100px;
   text-align: center;
-  top: -20%; 
+  top: -250px; 
   position: relative; 
   z-index: 1;
   color: rgb(255, 255, 255); 
@@ -178,7 +172,7 @@ html, body, #app {
   top: 16.5%;
   left: 0;
   width: 100vw;    
-  height: 140%;  
+  min-height: 100vh; 
   overflow: hidden; 
   border: 1px solid rgb(255, 255, 255); 
   background-color: white;

@@ -14,18 +14,22 @@
             <div class="b">CATEGORIES</div>
           </div>
           <ul class="menuItem">
-            <li><router-link to="/" class="m2">HOME</router-link></li>
-            <li><router-link to="/shop" class="m2">SHOP</router-link></li>
-            <li><router-link to="/family-card" class="m3">FAMILY CARD</router-link></li>
-            <li><router-link to="/contact" class="m4">CONTACT</router-link></li>
-            <li><router-link to="/catalog" class="m5">CATALOG</router-link></li>
-            <li><router-link to="/favorite" class="m5">FAVORITE</router-link></li>
-            <li><router-link to="/login" class="m6">LOG IN / SIGN UP</router-link></li>
+            <li><router-link to="/" class="m2" @click="menu2 = false">HOME</router-link></li>
+            <li><router-link to="/shop" class="m2" @click="menu2 = false">SHOP</router-link></li>
+            <li><router-link to="/family-card" class="m3" @click="menu2 = false">FAMILY CARD</router-link></li>
+            <li><router-link to="/contact" class="m4" @click="menu2 = false">CONTACT</router-link></li>
+            <li><router-link to="/catalog" class="m5" @click="menu2 = false">CATALOG</router-link></li>
+            <li><router-link to="/favorite" class="m5" @click="menu2 = false">FAVORITE</router-link></li>
+            <li>
+              <a href="#" class="m6" @click.prevent="showLogin(); menu2 = false">
+                LOG IN / SIGN UP
+              </a>
+            </li>
           </ul>
-          
         </div>
       </div>
     </div>
+
     <div class="container">
       <img class="logo" src="/logo1.png" alt="logo" />
 
@@ -36,12 +40,56 @@
       <div class="category">
         <p>CATEGORY <i class="fa-duotone fa-solid fa-chevron-down"></i></p>
       </div>
-      <p class="user"><i class="fa-regular fa-user"></i></p>
-      <p class="sr">SIGN IN / REGISTER</p>
-      
+
+      <p class="user" @click="showLogin(); menu2 = false"><i class="fa-regular fa-user"></i></p>
+      <p class="sr" @click="showLogin(); menu2 = false">SIGN IN / REGISTER</p>
+
+      <div v-if="login" class="overlay" @click="login = false">
+        <div class="login" @click.stop>
+          <div class="loginModal">
+            <div class="intro">
+              <div class="container">
+                <h2 class="signTitle">Sign in</h2>
+                <button class="close1" @click="login = false"><i class="fa-solid fa-xmark"></i> Close</button>
+              </div>
+            </div>
+
+            <label class="label">Username or email address <span style="color: red;">*</span></label><br>
+            <input type="email" class="signEmail" required>
+
+            <label class="label1">Password <span style="color: red;">*</span></label><br>
+            <input type="password" id="password" class="signPassword" required>
+
+            <div class="show">
+              <i class="fa-sharp fa-solid fa-eye"></i>
+            </div>
+
+            <button class="signButton">SIGN IN</button>
+
+            <div class="container">
+              <input type="checkbox" class="checkbox">
+              <label class="remember">Remember me</label>
+
+              <router-link to="/forgot-password" class="forgot">You forgot your password.</router-link>
+              
+            </div>
+
+            <div class="createBorder">
+              <p class="createAcc">
+                <i class="fa-regular fa-user"></i>
+              </p>
+              <p class="noAcc">No account yet?</p>
+              <router-link to="/create-acc" class="create">CREATE AN ACCOUNT</router-link>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
       <div class="favoriteLogo">
         <router-link to="/favorite">
-        <span class="fv"><i class="far fa-heart"></i></span>
+          <span class="fv" style="color: black;"><i class="far fa-heart"></i></span>
         </router-link>
         <div class="bag" @click="showBasket"><i class="fa-solid fa-bag-shopping"></i></div>
         <div v-if="basket" class="overlay" @click="basket = false">
@@ -60,17 +108,19 @@
               <p class="notification">There are no products in your cart.</p>
               <router-link to="/shop"><button class="storeButton">STORE</button></router-link>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
   </nav>
+
   <router-view />
   <Mm />
 
+  <button class="menuT" style="top: 0; position: relative; display: none;" @click="showMenu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 
-  <button class="menuT" style="top: 0; position: relative; display: none;" @click="showMenu"><i
-      class="fa-solid fa-bars"></i></button>
   <div v-if="menu2" class="overlay" @click="menu2 = false">
     <div class="menu2" @click.stop>
       <div class="search-bar">
@@ -89,33 +139,47 @@
         <li><router-link to="/favorite" class="m5">
             <span style="display: flex;"><i class="far fa-heart"></i> <span
                 style="margin-left: 6px;">FAVORITE</span></span>
-          </router-link></li>
-        <li><router-link to="/login" class="m6">
-            <span style="display: flex;"><i class="fa-regular fa-user"></i> <span style="margin-left: 6px;">LOG IN /
-                SIGN UP</span></span>
-          </router-link></li>
+          </router-link>
+        </li>
+        <li>
+          <span class="m6" @click.prevent="showLogin(); menu2 = false" style="display: flex; cursor: pointer;">
+            <i class="fa-regular fa-user"></i>
+            <span style="margin-left: 6px;">LOG IN / SIGN UP</span>
+          </span>
+        </li>
       </ul>
+
       <ul class="menuItem" v-else>
         <li><router-link to="/gadgets" class="b1">
-            <span style="display: flex; margin-top: -10px; margin-left: 15px;"><i class="fas fa-microchip"></i> <span
-                class="gd">GADGETS</span></span>
-          </router-link></li>
+            <span style="display: flex; margin-top: -10px; margin-left: 15px;">
+              <i class="fas fa-microchip"></i> <span class="gd">GADGETS</span>
+            </span>
+          </router-link>
+        </li>
         <li><router-link to="/kitchen" class="b2">
-            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fa-solid fa-kitchen-set"></i>
-              <span class="gd">KITCHEN</span></span>
-          </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;">
+              <i class="fa-solid fa-kitchen-set"></i> <span class="gd">KITCHEN</span>
+            </span>
+          </router-link>
+        </li>
         <li><router-link to="/home and garden" class="b3">
-            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-seedling"></i> <span
-                class="gd">HOME AND GARDEN</span></span>
-          </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;">
+              <i class="fas fa-seedling"></i> <span class="gd">HOME AND GARDEN</span>
+            </span>
+          </router-link>
+        </li>
         <li><router-link to="/health & beauty" class="b4">
-            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-heartbeat"></i> <span
-                class="gd">HEALTH & BEAUTY</span></span>
-          </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;">
+              <i class="fas fa-heartbeat"></i> <span class="gd">HEALTH & BEAUTY</span>
+            </span>
+          </router-link>
+        </li>
         <li><router-link to="/action" class="b5">
-            <span style="display: flex; margin-top: 0px; margin-left: 5px;"><i class="fas fa-tag"></i> <span
-                class="gd">ACTION</span></span>
-          </router-link></li>
+            <span style="display: flex; margin-top: 0px; margin-left: 5px;">
+              <i class="fas fa-tag"></i> <span class="gd">ACTION</span>
+            </span>
+          </router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -128,6 +192,7 @@ import Mm from './mainMenu.vue'
 
 const menu2 = ref(false)
 const basket = ref(false)
+const login = ref(false)
 const activeTab = ref('menu')
 
 function showMenu() {
@@ -136,46 +201,207 @@ function showMenu() {
 function showBasket() {
   basket.value = !basket.value
 }
+function showLogin() {
+  login.value = true
+}
 </script>
 
+
 <style scoped>
+.signButton {
+  border: none;
+  background-color: #1cb317;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.show {
+  margin-top: -33px;
+  margin-left: 420px;
+}
+.label1 {
+  margin-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.label {
+  margin-left: 12px;
+  position: absolute;
+  top: 110px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.signPassword {
+  height: 40px;
+  margin-left: 14px;
+  margin-right: 15px;
+  width: 90%;
+  margin-top: 15px;
+}
+.signEmail {
+  height: 40px;
+  margin-left: 14px;
+  margin-right: 15px;
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.close1 {
+  background: none;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin-top: 2%;
+  margin-right: - 5%;
+}
+
+.signTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  margin-top: 5%;
+}
+
+.intro {
+  border: 1px solid black;
+  height: 70px;
+  margin-left: -1px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  width: 100%;
+}
+
+.loginModal {
+  border: 1px solid white;
+  background-color: white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 20%;
+}
+.createBorder {
+  border: 1px solid rgb(175, 175, 175);
+  width: 100px !important;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+
+}
+.createAcc {
+  text-align: center;
+  color: rgb(175, 175, 175);
+  font-size: 50px;
+}
+.noAcc {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.create {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: rgb(16, 187, 16);  
+  text-decoration-thickness: 3px;
+  
+}
 @media (min-width: 2758px) and (max-width: 3025px) {
   .logo {
     transform: translateX(270px);
   }
+
   .search {
     transform: translateX(270px);
   }
+
   .category {
     transform: translateX(270px);
   }
+
   #searchLogo {
     transform: translateX(270px);
+  }
+
+  .user {
+    transform: translateX(270px);
+  }
+
+  .sr {
+    transform: translateX(270px);
+  }
+
+  .favoriteLogo {
+    transform: translateX(270px);
+  }
 }
-.user {
-  transform: translateX(270px);
-}
-.sr {
-  transform: translateX(270px);
-}
-.favoriteLogo {
-  transform: translateX(270px);
-}
-}
+
 @media (min-width: 1741px) and (max-width: 2200px) {
+  .create {
+
+  }
+  .noAcc {
+    margin-top: -30px !important;
+  }
+  .createAcc {
+    margin-top: 30px !important;
+  }
+  .createBorder {
+    height: 200px !important;
+    width: 100% !important;
+    margin-top: 40px !important;
+  }
+  .forgot {
+    margin-top: 30px !important;
+    margin-left: 40px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .signButton {
+    height: 40px !important;
+    margin-left: 4% !important;
+    margin-top: 40px;
+    width: 93%;
+  }
+  .loginModal {
+    width: 18% !important;
+  }
+  .checkbox {
+    margin-top: 30px !important;
+    margin-left: 5% !important;
+    width: 15px;
+    height: 15px; 
+  }
+  .remember {
+    margin-top: 30px !important;
+    margin-left: 5px !important;
+    font-size: 15px;
+  }
+
   .storeButton {
-  margin-left: 35% !important;
-  margin-top: 10% !important;
-  height: 40px !important;
-  width: 30% !important;
-  
-}
-.xmark {
-  margin-left: 140px !important;
-}
-.basketTitle, .close {
-  top: 0% !important;
-}
+    margin-left: 35% !important;
+    margin-top: 10% !important;
+    height: 40px !important;
+    width: 30% !important;
+
+  }
+
+  .xmark {
+    margin-left: 140px !important;
+  }
+  .close1 {
+    margin-left: 40%;
+    margin-top: -2px;
+  }
+
+  .basketTitle,
+  .close {
+    top: 0% !important;
+  }
 }
 
 .storeButton {
@@ -189,6 +415,7 @@ function showBasket() {
   margin-left: 35%;
   margin-top: 10%;
 }
+
 .notification {
   text-align: center;
   margin-top: 150px;
@@ -196,18 +423,21 @@ function showBasket() {
   font-size: 16px;
   font-weight: bold;
 }
+
 .xmark {
   margin-top: -150px;
   font-size: 50px;
   margin-left: 185px;
   color: #ffffff;
 }
+
 .cart {
   text-align: center;
   font-size: 150px;
   color: #aaaaaa;
   margin-left: -20px;
 }
+
 .basketTitle {
   position: absolute;
   top: 1%;
@@ -215,12 +445,14 @@ function showBasket() {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
+
 .close {
   position: absolute;
   right: 8%;
   top: 1%;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .border1 {
   border: 1px solid rgb(170, 170, 170);
   height: 7%;
@@ -228,6 +460,7 @@ function showBasket() {
   border-left: none;
   border-right: none;
 }
+
 .basket {
   border: 1px solid black;
   position: absolute;
@@ -236,6 +469,7 @@ function showBasket() {
   right: 0;
   background-color: white;
 }
+
 .gd {
   margin-left: 10px;
 }
@@ -307,9 +541,19 @@ function showBasket() {
 
 @media (min-width: 1921px) and (max-width: 3025px) {}
 
-@media (min-width: 1024px) and (max-width: 1920px) {
+
+@media (min-width: 1741px) and (max-width: 2200px) {
+  .logo {
+    margin-left: 15% !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1700px) {
   .logo {
     margin-left: 295px !important;
+  }
+  .search {
+    margin-left: 5% !important;
   }
 }
 
@@ -318,16 +562,21 @@ function showBasket() {
     margin-left: 10px !important;
     text-align: center;
   }
+
   .cart {
     margin-left: -10px !important;
   }
-  .basketTitle, .close {
+
+  .basketTitle,
+  .close {
     margin-top: 3% !important;
   }
+
   .basket {
     width: 30% !important;
     z-index: -9999;
   }
+
   .logo {
     margin-left: 5px !important;
   }
@@ -371,7 +620,26 @@ function showBasket() {
   }
 
 }
+
 @media (min-width: 421px) and (max-width: 767px) {
+  .signTitle {
+    position: absolute;
+    top: 18px;
+    left: 2%;
+    margin-top: 0;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin-top: 0;
+  }
+
+  .loginModal {
+    width: 80% !important;
+  }
+
   .search,
   .category,
   #searchLogo,
@@ -380,6 +648,7 @@ function showBasket() {
   .fv {
     display: none;
   }
+
   .logo {
     margin-left: 30% !important;
     height: 125px !important;
@@ -389,6 +658,7 @@ function showBasket() {
   .menu {
     height: 50px !important;
   }
+
   .bag {
     position: absolute;
     top: 40px;
@@ -404,6 +674,7 @@ function showBasket() {
     position: fixed !important;
     z-index: 999;
   }
+
   .menu2 {
     width: 79% !important;
   }
@@ -413,30 +684,37 @@ function showBasket() {
     margin-top: 70px !important;
     font-weight: normal;
   }
-.m1 {
-  width: 222% !important;
-}
-.m2 {
-  width: 12.8%;
-}
+
+  .m1 {
+    width: 222% !important;
+  }
+
+  .m2 {
+    width: 12.8%;
+  }
 
   .b {
     margin-left: 45% !important;
     margin-top: -63px !important;
     width: 39.3% !important;
   }
+
   .b1 {
     width: 38%;
   }
+
   .b2 {
     width: 34.3% !important;
   }
+
   .b3 {
     width: 62.3%;
   }
+
   .b4 {
     width: 58.3%;
   }
+
   .b5 {
     width: 30%;
   }
@@ -444,18 +722,23 @@ function showBasket() {
   .m1 {
     padding-right: 94.9% !important;
   }
+
   .m2 {
     width: 13%;
   }
+
   .mcc {
     width: 24%;
   }
+
   .m4 {
     width: 24.5%;
   }
+
   .m5 {
     width: 33%;
   }
+
   .m6 {
     width: 53.7%;
   }
@@ -464,12 +747,16 @@ function showBasket() {
     margin-left: 10px !important;
     text-align: center;
   }
+
   .cart {
     margin-left: -10px !important;
   }
-  .basketTitle, .close {
+
+  .basketTitle,
+  .close {
     margin-top: 3% !important;
   }
+
   .basket {
     width: 70% !important;
   }
@@ -478,15 +765,73 @@ function showBasket() {
 @media (max-width: 420px) {
 
 
+  .checkbox {
+    margin-top: 30px !important;
+    margin-left: 5% !important;
+    width: 15px;
+    height: 15px; 
+  }
+  .remember {
+    margin-top: 30px !important;
+    margin-left: 5px !important;
+    font-size: 14px;
+  }
+  .forgot {
+    font-size: 13px !important;
+    margin-left: 30px !important;
+  }
+  .close1 {
+    margin-left: 63%;
+    margin-top: 17px;
+  }
+  .noAcc {
+    margin-top: -30px !important;
+  }
+  .createAcc {
+    margin-top: 30px !important;
+  }
+  .createBorder {
+    height: 200px !important;
+    width: 100% !important;
+    margin-top: 40px !important;
+  }
+  .forgot {
+    margin-top: 30px !important;
+    margin-left: 40px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .signButton {
+    height: 40px !important;
+    margin-left: 4% !important;
+    margin-top: 40px;
+    width: 93%;
+  }
+
+  .signTitle {
+    position: absolute;
+    top: 18px;
+    left: 2%;
+    margin-top: 0;
+  }
+
+  .loginModal {
+    width: 80% !important;
+  }
+
   .xmark {
     margin-left: 140px !important;
   }
+
   .cart {
     margin-left: -10px !important;
   }
-  .basketTitle, .close {
+
+  .basketTitle,
+  .close {
     margin-top: 3% !important;
   }
+
   .basket {
     width: 80% !important;
   }
@@ -541,18 +886,23 @@ function showBasket() {
     margin-top: -63px !important;
     width: 39.5% !important;
   }
+
   .b1 {
     width: 38.7%;
   }
+
   .b2 {
     width: 33.5% !important;
   }
+
   .b3 {
     width: 61.5%;
   }
+
   .b4 {
     width: 57.5%;
   }
+
   .b5 {
     width: 29.4%;
   }
@@ -750,16 +1100,38 @@ function showBasket() {
 @media (min-width: 768px) and (max-width: 1024px) {
 
 
+  .signTitle {
+    position: absolute;
+    top: 18px;
+    left: 2%;
+    margin-top: 0;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin-top: 0;
+  }
+
+  .loginModal {
+    width: 50% !important;
+  }
+
   .xmark {
     margin-left: 10px !important;
     text-align: center;
   }
+
   .cart {
     margin-left: -10px !important;
   }
-  .basketTitle, .close {
+
+  .basketTitle,
+  .close {
     margin-top: 3% !important;
   }
+
   .basket {
     width: 40% !important;
   }
@@ -768,41 +1140,53 @@ function showBasket() {
   .m1 {
     padding-right: 90.5%;
   }
+
   .m2 {
     width: 17%;
   }
+
   .mcc {
     width: 28%;
   }
+
   .m4 {
     width: 28%;
   }
+
   .m5 {
     width: 37%;
   }
+
   .m6 {
     width: 57%;
   }
+
   .b {
     margin-left: 45% !important;
     margin-top: -63px !important;
     width: 39.5% !important;
   }
+
   .b1 {
     width: 38.7%;
   }
+
   .b2 {
     width: 33.5% !important;
   }
+
   .b3 {
     width: 61.5%;
   }
+
   .b4 {
     width: 57.5%;
   }
+
   .b5 {
     width: 29.4%;
   }
+
   .active {
     background-color: rgb(0, 0, 0, 0.2) !important;
     color: rgb(0, 0, 0);
@@ -858,10 +1242,12 @@ function showBasket() {
     margin-top: -75px;
     margin-left: 42%;
   }
+
   .favoriteLogo {
-  display: block;
-  margin-top: -10000000px !important;
-}
+    display: block;
+    margin-top: -10000000px !important;
+  }
+
   .search,
   #searchLogo,
   .category,
@@ -878,6 +1264,10 @@ function showBasket() {
   .menuS {
     display: block;
   }
+}
+
+.mainHeart {
+  color: #a51313;
 }
 
 .bag {
@@ -941,7 +1331,7 @@ function showBasket() {
 
 .search {
   height: 40px;
-  width: 545px;
+  width: 645px;
   margin-top: 28px;
   margin-left: 5px;
   outline: none;
@@ -957,7 +1347,7 @@ function showBasket() {
   height: 180px;
   width: 210px;
   margin-top: -37px;
-  margin-left: 600px;
+  margin-left: 680px;
 }
 
 .menu {

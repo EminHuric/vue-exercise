@@ -170,7 +170,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 15px;
-    margin-left: 620px;
+    margin-left: 700px;
 
 }
 

@@ -43,13 +43,13 @@
   <button type="submit" class="send">Send</button>
 </form>
 
+<MainFooter />
   </div>
+
 </template>
 
-<script>
-export default {
-  name: "Contat",
-};
+<script setup>
+import MainFooter from '../components/mainFooter.vue';
 </script>
 
 <style scoped>
@@ -327,7 +327,7 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100px;
   text-align: center;
-  top: -20%; 
+  top: -270px; 
   position: relative; 
   z-index: 1;
   color: rgb(255, 255, 255); 
@@ -343,7 +343,7 @@ html, body, #app {
   top: 16.5%;
   left: 0;
   width: 100vw;    
-  height: 140vh;  
+  min-height: 210vh; 
   overflow: hidden; 
   border: 1px solid rgb(255, 255, 255); 
   background-color: white;
@@ -351,7 +351,7 @@ html, body, #app {
 
 .photo {
   width: 100%;
-  height: 20%;
+  height: 300px;
   margin-top: 0%;
   object-fit: cover; 
   display: block;

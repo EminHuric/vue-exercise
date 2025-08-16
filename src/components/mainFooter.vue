@@ -1,42 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 const showInfo = ref(false)
 const showFollow = ref(false)
-
-onMounted(() => {
-  document.getElementById("emailForm").addEventListener("submit", function (event) {
-    const email = document.getElementById("email").value.trim();
-    const errorElement = document.getElementById("error");
-
-    if (email === "") {
-      errorElement.textContent = "Email cannot be empty.";
-      event.preventDefault();
-      return;
-    }
-
-    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!pattern.test(email)) {
-      errorElement.textContent = "Please enter a valid email (e.g. name@domain.com)";
-      event.preventDefault();
-      return;
-    }
-
-    errorElement.textContent = ""; // Clear error if valid
-  });
-});
 </script>
 
 <template>
   <div class="page">
     <div class="content">
-      <form id="emailForm" class="ne" action="https://formsubmit.co/ehrx09@gmail.com" method="POST">
-        <h1 class="sub">Subscribe to our newsletter</h1>
-        <input id="email" name="email" type="email" placeholder="Your email address" class="yea" />
-        <button class="join" type="submit">Join</button>
-        <p class="notification">It will be used in accordance with our <a href="" class="privacy">Privacy Policy</a></p>
-      </form>
+      
     </div>
 
     <footer>
@@ -115,12 +87,11 @@ onMounted(() => {
   .footer {
     margin-left: 4% !important;
   }
+  .email {
+    margin-left: -57% !important;
+  }
   .partner1 {
     margin-left: 18% !important;
-  }
-
-  .email {
-    margin-left: -56.7% !important;
   }
 
   .p2 {
@@ -136,9 +107,7 @@ onMounted(() => {
   }
 
   .pib {
-
     margin-left: -57.2% !important;
-
   }
 
   .info {
@@ -175,7 +144,6 @@ onMounted(() => {
   .contact {
     margin-top: 30px;
     margin-left: 35px !important;
-
   }
 
   .about {
@@ -191,12 +159,18 @@ onMounted(() => {
     height: 93vh !important;
   }
 }
+
 @media (min-width: 1281px) and (max-width: 1701px) {
   .partners {
     margin-left: -25% !important;
   }
+  
 }
+
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .email {
+    margin-left: -72% !important;
+  }
   .partners {
     margin-left: -37% !important;
   }
@@ -229,9 +203,6 @@ onMounted(() => {
   .p2 {
     margin-left: -61% !important;
   }
-  .email {
-    margin-left: -75% !important;
-  }
   .about {
     margin-left: 11% !important;
   }
@@ -249,27 +220,16 @@ onMounted(() => {
   }
   .follow {
     margin-left: 65% !important;
-    
   }
   .ig {
     margin-left: 62% !important;
   }
-  .sub {
-    margin-top: -10% !important;
-  }
-  #email {
-    width: 44% !important;
-    margin-left: 22% !important;
-    margin-top: 2% !important;
-  }
-  .join {
-    width: 10% !important;
-  }
-  .notification {
-    margin-top: 5% !important;
-  }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
+  .email {
+    margin-left: -72% !important;
+  }
   .partners {
     margin-left: -40% !important;
   }
@@ -302,9 +262,6 @@ onMounted(() => {
   .p2 {
     margin-left: -61% !important;
   }
-  .email {
-    margin-left: -75% !important;
-  }
   .about {
     margin-left: 11% !important;
   }
@@ -326,22 +283,12 @@ onMounted(() => {
   .ig {
     margin-left: 62% !important;
   }
-  .sub {
-    margin-top: -10% !important;
-  }
-  #email {
-    width: 44% !important;
-    margin-left: 22% !important;
-    margin-top: 2% !important;
-  }
-  .join {
-    width: 10% !important;
-  }
-  .notification {
-    margin-top: 5% !important;
-  }
 }
+
 @media (min-width: 601px) and (max-width: 767px) {
+  .email {
+    margin-left: -72% !important;
+  }
   .page {
     height: 150vh !important;
   }
@@ -360,14 +307,9 @@ onMounted(() => {
     margin-top: 0% !important;
     margin-left: 20% !important;
   }
-  .email {
-    margin-left: -75% !important;
-  }
-
   .p2 {
     margin-left: -57% !important;
   }
-
   .p1 {
     margin-left: -63% !important;
   }
@@ -381,7 +323,6 @@ onMounted(() => {
   .footer {
     height: 80vh !important;
   }
-
   .logo {
     margin-left: -75% !important;
   }
@@ -423,37 +364,37 @@ onMounted(() => {
     margin-top: -100px !important;
   }
   .partner3 {
-  margin-top: 2% !important;
-  width: 35% !important;
-  height: 87px !important;
-  margin-left: -90% !important;
-}
-.partner4 {
-  height: 45px !important;
-  margin-top: 5% !important;
-  width: 40% !important;
-  margin-left: 11% !important;
-}
-.ne {
-  margin-top: 70% !important;
-}
-.sub {
-  font-size: 28px !important;
-  margin-top: -45% !important;
-}
-.yea {
-  width: 45% !important;
-  margin-left: 20% !important;
-  margin-top: 5% !important;
-}
-.join {
-  width: 15% !important;
-}
-.notification {
-  margin-top: 5% !important;
+    margin-top: 2% !important;
+    width: 35% !important;
+    height: 87px !important;
+    margin-left: -90% !important;
+  }
+  .partner4 {
+    height: 45px !important;
+    margin-top: 5% !important;
+    width: 40% !important;
+    margin-left: 11% !important;
+  }
+  .ne {
+    margin-top: 70% !important;
+  }
+  .sub {
+    font-size: 28px !important;
+    margin-top: -45% !important;
+  }
+  .yea {
+    width: 45% !important;
+    margin-left: 20% !important;
+    margin-top: 5% !important;
+  }
+  .join {
+    width: 15% !important;
+  }
+  .notification {
+    margin-top: 5% !important;
+  }
 }
 
-}
 @media (min-width: 421px) and (max-width: 600px) {
   .page {
     height: 170vh !important;
@@ -473,26 +414,18 @@ onMounted(() => {
     margin-top: 8% !important;
     margin-left: -65% !important;
   }
-  .email {
-    margin-left: -55% !important;
-  }
-
   .p2 {
     margin-left: -27% !important;
   }
-
   .p1 {
     margin-left: -37% !important;
   }
-
   .footer {
     height: 80vh !important;
   }
-
   .logo {
     margin-left: -55% !important;
   }
-
   .pib {
     margin-left: -59% !important;
   }
@@ -515,37 +448,36 @@ onMounted(() => {
     margin-top: -100px !important;
   }
   .partner3 {
-  margin-top: 2% !important;
-  width: 45% !important;
-  height: 87px !important;
-  margin-left: -107% !important;
-}
-.partner4 {
-  height: 45px !important;
-  margin-top: 8% !important;
-  width: 48% !important;
-  margin-left: 5% !important;
-}
-.ne {
-  margin-top: 70% !important;
-}
-.sub {
-  font-size: 28px !important;
-}
-.yea {
-  width: 65% !important;
-  margin-left: 3% !important;
-  margin-top: 5% !important;
-}
-.join {
-  width: 23% !important;
-}
-.notification {
-  margin-top: 5% !important;
+    margin-top: 2% !important;
+    width: 45% !important;
+    height: 87px !important;
+    margin-left: -107% !important;
+  }
+  .partner4 {
+    height: 45px !important;
+    margin-top: 8% !important;
+    width: 48% !important;
+    margin-left: 5% !important;
+  }
+  .ne {
+    margin-top: 70% !important;
+  }
+  .sub {
+    font-size: 28px !important;
+  }
+  .yea {
+    width: 65% !important;
+    margin-left: 3% !important;
+    margin-top: 5% !important;
+  }
+  .join {
+    width: 23% !important;
+  }
+  .notification {
+    margin-top: 5% !important;
+  }
 }
 
-
-}
 @media (max-width: 420px) {
   .page {
     height: 170vh !important;
@@ -558,29 +490,25 @@ onMounted(() => {
     margin-top: -3% !important;
   }
   .about {
-    margin-top: 8% !important;
-    margin-left: -65% !important;
+    margin-top: 3% !important;
+    margin-left: -68% !important;
   }
   .email {
-    margin-left: -55% !important;
+    margin-left: -60% !important;
+    margin-bottom: 7% !important;
   }
-
   .p2 {
-    margin-left: -27% !important;
+    margin-left: -32% !important;
   }
-
   .p1 {
-    margin-left: -37% !important;
+    margin-left: -41% !important;
   }
-
   .footer {
     height: 80vh !important;
   }
-
   .logo {
-    margin-left: -55% !important;
+    margin-left: -60% !important;
   }
-
   .pib {
     margin-left: -59% !important;
   }
@@ -603,55 +531,51 @@ onMounted(() => {
     margin-top: -100px !important;
   }
   .partner3 {
-  margin-top: 2% !important;
-  width: 45% !important;
-  height: 87px !important;
-  margin-left: -107% !important;
-}
-.partner4 {
-  height: 45px !important;
-  margin-top: 8% !important;
-  width: 48% !important;
-  margin-left: 5% !important;
-}
-.ne {
-  margin-top: 70% !important;
-}
-.sub {
-  font-size: 28px !important;
-}
-.yea {
-  width: 65% !important;
-  margin-left: 3% !important;
-  margin-top: 5% !important;
-}
-.join {
-  width: 23% !important;
-}
-.notification {
-  margin-top: 5% !important;
+    margin-top: 2% !important;
+    width: 45% !important;
+    height: 87px !important;
+    margin-left: -107% !important;
+  }
+  .partner4 {
+    height: 45px !important;
+    margin-top: 8% !important;
+    width: 48% !important;
+    margin-left: 5% !important;
+  }
+  .ne {
+    margin-top: 70% !important;
+  }
+  .sub {
+    font-size: 28px !important;
+  }
+  .yea {
+    width: 65% !important;
+    margin-left: 3% !important;
+    margin-top: 5% !important;
+  }
+  .join {
+    width: 23% !important;
+  }
+  .notification {
+    margin-top: 5% !important;
+  }
 }
 
-
-}
 #sf {
   margin-left: -71%;
   margin-top: -3%;
 }
+
 .followw {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-top: 0px;
   margin-left: -62%;
 }
+
 .aboutPhone,
 .followPhone {
   display: none;
-}
-.notification {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
 }
 
 .privacy {
@@ -660,29 +584,11 @@ onMounted(() => {
   font-weight: bold;
 }
 
-.join {
-  height: 43px;
-  padding: 5px;
-  width: 5%;
-  margin-left: 10px;
-  border: none;
-  background-color: rgb(97, 177, 17);
-  color: #ffffff;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-}
-
 .yea {
   height: 30px;
   margin-left: 40%;
   padding: 5px;
   width: 15%;
-}
-
-.sub {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .ig {
@@ -831,4 +737,5 @@ onMounted(() => {
   height: 350px;
   border-top: 1px solid #ffffff;
 }
+
 </style>

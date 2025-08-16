@@ -2,13 +2,12 @@
   <div class="shopBg">
     <img alt="photo" src="/photo.avif" class="photo" />
     <h1 class="shopTitle">Shop</h1>
+    <MainFooter />
   </div>
 </template>
 
-<script>
-export default {
-  name: "Shop",
-};
+<script setup>
+import MainFooter from '../components/mainFooter.vue'
 </script>
 
 <style scoped>
@@ -23,9 +22,6 @@ export default {
 @media (min-width: 768px) and (max-width: 1024px) {
   .shopBg {
     top: 8% !important;
-  }
-  .shopTitle {
-    top: -22% !important;
   }
 }
 @media (min-width: 421px) and (max-width: 767px) {
@@ -63,7 +59,7 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100px;
   text-align: center;
-  top: -20%; 
+  top: -250px; 
   position: relative; 
   z-index: 1;
   color: rgb(255, 255, 255); 
@@ -79,7 +75,7 @@ html, body, #app {
   top: 16.5%;
   left: 0;
   width: 100vw;    
-  height: 140%;  
+  min-height: 100vh; 
   overflow: hidden; 
   border: 1px solid rgb(255, 255, 255); 
   background-color: white;

@@ -505,7 +505,7 @@ import Footer from '../components/footer.vue'
   background-color: rgb(255, 255, 255);
   position: absolute;
   left: 0;
-  top: 16.6%;
+  top: 15%;
   border: none;
 }
 </style>
