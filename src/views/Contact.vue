@@ -343,7 +343,7 @@ html, body, #app {
   top: 16.5%;
   left: 0;
   width: 100vw;    
-  min-height: 210vh; 
+  min-height: 100vh; 
   overflow: hidden; 
   border: 1px solid rgb(255, 255, 255); 
   background-color: white;

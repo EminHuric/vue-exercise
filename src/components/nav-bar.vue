@@ -1,7 +1,5 @@
 <script setup>
-function showBasket() {
-    basket.value = !basket.value
-}
+
 </script>
 
 <template>

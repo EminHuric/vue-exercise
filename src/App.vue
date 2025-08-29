@@ -10,28 +10,51 @@ import Why from './components/why.vue'
 
 const route = useRoute()
 
-const minimalRoutes = ['/shop', '/contact', '/favorite', '/family-card', '/katalog', '/gw',
+const minimalRoutes = [
+  '/shop',
+  '/contact',
+  '/favorite',
+  '/family-card',
+  '/katalog',
+  '/gw',
   '/forgot-password',
   '/create-acc'
-
 ]
 
 const isMinimal = computed(() => minimalRoutes.includes(route.path))
 </script>
 
 <template>
-  <template v-if="isMinimal">
+  <div id="app">
     <Men />
-    <router-view />
-    <Nav />
-  </template>
 
-  <template v-else>
-    <Men />
-    <GwPhoto />
-    <router-view />
-    <Why />
-    <Footer />
+    <div class="page">
+      <template v-if="isMinimal">
+        <router-view />
+      </template>
+
+      <template v-else>
+        <GwPhoto />
+        <router-view />
+        <Why />
+      </template>
+    </div>
+
+    <Footer v-if="!isMinimal" />
     <Nav />
-  </template>
+  </div>
 </template>
+
+<style>
+#app {
+  min-height: 100vh;          /* okvir: barem visina ekrana */
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;                    /* stranica popunjava prostor između Men/Nav/Footer */
+  display: flex;
+  flex-direction: column;
+}
+</style>

@@ -25,7 +25,14 @@
         transform: translateX(200px) !important;
     }
 }
-
+@media (min-width: 1921px) and (max-width: 2200px) {
+    .wP {
+        margin-left: 17% !important;
+    }
+    .email {
+        margin-left: 50% !important;
+    }
+}
 @media (min-width: 1024px) and (max-width: 1920px) {
     .wP {
         margin-left: 315px !important;
@@ -161,7 +168,7 @@
 
 .email {
     border: 1px solid rgb(12, 173, 12);
-    margin-left: 33%;
+    margin-left: 35%;
 
 }
 
@@ -170,7 +177,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 15px;
-    margin-left: 700px;
+    margin-left: 630px;
 
 }
 

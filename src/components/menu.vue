@@ -71,7 +71,7 @@
               <label class="remember">Remember me</label>
 
               <router-link to="/forgot-password" class="forgot">You forgot your password.</router-link>
-              
+
             </div>
 
             <div class="createBorder">
@@ -215,11 +215,17 @@ function showLogin() {
   font-weight: bold;
   color: white;
   text-align: center;
+  margin-top: 50px;
+  height: 50px;
+  margin-left: 2.5%;
+  width: 92%;
 }
+
 .show {
   margin-top: -33px;
-  margin-left: 420px;
+  margin-left: 87%;
 }
+
 .label1 {
   margin-left: 15px;
   font-family: Arial, Helvetica, sans-serif;
@@ -241,6 +247,7 @@ function showLogin() {
   width: 90%;
   margin-top: 15px;
 }
+
 .signEmail {
   height: 40px;
   margin-left: 14px;
@@ -254,15 +261,16 @@ function showLogin() {
   background: none;
   border: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  margin-top: 2%;
-  margin-right: - 5%;
+  font-size: 20px;
+  margin-top: 1.5%;
+  margin-left: 60%;
 }
 
 .signTitle {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 10px;
   margin-top: 5%;
+  font-size: 20px;
 }
 
 .intro {
@@ -283,33 +291,59 @@ function showLogin() {
   top: 0;
   height: 100vh;
   width: 20%;
+  z-index: 99;
 }
+
 .createBorder {
   border: 1px solid rgb(175, 175, 175);
-  width: 100px !important;
+  width: 100%;
   border-left: none;
   border-right: none;
   text-align: center;
-
+  margin-top: 5%;
+  height: 20%;
 }
+
 .createAcc {
   text-align: center;
   color: rgb(175, 175, 175);
   font-size: 50px;
 }
+
 .noAcc {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .create {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   text-decoration: underline;
-  text-decoration-color: rgb(16, 187, 16);  
+  text-decoration-color: rgb(16, 187, 16);
   text-decoration-thickness: 3px;
-  
+
 }
+
+.checkbox {
+  margin-top: 30px !important;
+  margin-left: 3% !important;
+  width: 15px;
+  height: 15px;
+}
+
+.remember {
+  margin-top: 30px !important;
+  margin-left: 5px !important;
+  font-size: 15px;
+}
+.forgot {
+    margin-top: 30px !important;
+    margin-left: 30%;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
 @media (min-width: 2758px) and (max-width: 3025px) {
   .logo {
     transform: translateX(270px);
@@ -341,45 +375,74 @@ function showLogin() {
 }
 
 @media (min-width: 1741px) and (max-width: 2200px) {
-  .create {
+  .createBorder {
+  border: 1px solid rgb(175, 175, 175);
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
 
+  .close1 {
+  background: none;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-right: - 5%;
+}
+  .signButton {
+    border: none;
+    background-color: #1cb317;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
   }
+
   .noAcc {
     margin-top: -30px !important;
   }
+
   .createAcc {
     margin-top: 30px !important;
   }
+
   .createBorder {
     height: 200px !important;
     width: 100% !important;
     margin-top: 40px !important;
   }
+
   .forgot {
     margin-top: 30px !important;
     margin-left: 40px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
   }
+
   .signButton {
     height: 40px !important;
     margin-left: 4% !important;
     margin-top: 40px;
     width: 93%;
   }
+
   .loginModal {
     width: 18% !important;
   }
+
   .checkbox {
     margin-top: 30px !important;
     margin-left: 5% !important;
     width: 15px;
-    height: 15px; 
+    height: 15px;
   }
+
   .remember {
     margin-top: 30px !important;
     margin-left: 5px !important;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .storeButton {
@@ -393,6 +456,7 @@ function showLogin() {
   .xmark {
     margin-left: 140px !important;
   }
+
   .close1 {
     margin-left: 40%;
     margin-top: -2px;
@@ -401,6 +465,9 @@ function showLogin() {
   .basketTitle,
   .close {
     top: 0% !important;
+  }
+  .signTitle {
+    font-size: 20px;
   }
 }
 
@@ -547,17 +614,35 @@ function showLogin() {
     margin-left: 15% !important;
   }
 }
-
+@media (min-width: 1711px) and (max-width: 1741px) {
+  .logo {
+    margin-left: 15% !important;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1700px) {
   .logo {
     margin-left: 295px !important;
   }
+
   .search {
     margin-left: 5% !important;
   }
+  .loginModal {
+    width: 30% !important;
+  }
+  
 }
 
 @media (min-width: 1024px) and (max-width: 1709px) {
+
+  .signTitle {
+    font-size: 20px !important;
+    margin-top: 8% !important;
+  }
+  .close1 {
+    font-size: 20px;
+    margin-left: 40% !important;
+  }
   .xmark {
     margin-left: 10px !important;
     text-align: center;
@@ -622,6 +707,9 @@ function showLogin() {
 }
 
 @media (min-width: 421px) and (max-width: 767px) {
+  .createBorder {
+    height: 30% !important;
+  }
   .signTitle {
     position: absolute;
     top: 18px;
@@ -769,38 +857,46 @@ function showLogin() {
     margin-top: 30px !important;
     margin-left: 5% !important;
     width: 15px;
-    height: 15px; 
+    height: 15px;
   }
+
   .remember {
     margin-top: 30px !important;
     margin-left: 5px !important;
     font-size: 14px;
   }
+
   .forgot {
     font-size: 13px !important;
     margin-left: 30px !important;
   }
+
   .close1 {
     margin-left: 63%;
     margin-top: 17px;
   }
+
   .noAcc {
     margin-top: -30px !important;
   }
+
   .createAcc {
     margin-top: 30px !important;
   }
+
   .createBorder {
     height: 200px !important;
     width: 100% !important;
     margin-top: 40px !important;
   }
+
   .forgot {
     margin-top: 30px !important;
     margin-left: 40px;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
   }
+
   .signButton {
     height: 40px !important;
     margin-left: 4% !important;
@@ -1099,7 +1195,9 @@ function showLogin() {
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-
+.createBorder {
+    height: 30% !important;
+  }
   .signTitle {
     position: absolute;
     top: 18px;
@@ -1347,7 +1445,7 @@ function showLogin() {
   height: 180px;
   width: 210px;
   margin-top: -37px;
-  margin-left: 680px;
+  margin-left: 600px;
 }
 
 .menu {

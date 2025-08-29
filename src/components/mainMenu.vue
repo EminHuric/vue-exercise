@@ -76,7 +76,7 @@
 
 @media (min-width: 1921px) and (max-width: 2200px) {
     .categoriesButton {
-        margin-left: 500px !important;
+        margin-left: 310px !important;
     }
 
     .fcd {
@@ -84,13 +84,13 @@
     }
 
     .main-menu {
-        margin-left: 150px !important;
+        margin-left: 100px !important;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1108px) {
   .main-menu {
-    left: 180px !important; /* pomeraš sa 130px na 150px */
+    left: 180px !important;
   }
 }
 

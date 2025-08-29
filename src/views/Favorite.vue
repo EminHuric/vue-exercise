@@ -70,7 +70,7 @@ import MainFooter from '../components/mainFooter.vue'
   top: 6.5% !important;
   left: 0 !important;
   width: 100vw;    
-  height: 300% !important;  
+  height: 250% !important;  
 }
 .photo {
   height: 10% !important;
