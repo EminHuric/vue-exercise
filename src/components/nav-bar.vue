@@ -18,10 +18,10 @@
                 <span class="navName2">Basket</span>
             </a>
 
-            <a href="#" class="acc">
+            <router-link to="/create-acc" class="acc">
                 <span class="navLogo3"><i class="fa-regular fa-user"></i></span><br>
                 <span class="navName3">Account</span>
-            </a>
+            </router-link>
         </div>
     </nav>
 </template>
