@@ -435,7 +435,7 @@ const signUp = ref(true)
         margin-top: 20px !important;
     }
     .shopTitle {
-        font-size: 80px !important;
+        font-size: 60px !important;
     }
     .notification, .info2 {
         margin-left: 4% !important;
