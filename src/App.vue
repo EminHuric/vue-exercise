@@ -21,7 +21,10 @@ const minimalRoutes = [
   '/create-acc'
 ]
 
-const isMinimal = computed(() => minimalRoutes.includes(route.path))
+const isMinimal = computed(() => {
+  return minimalRoutes.some(routePath => route.path === routePath || route.path.startsWith('/product/'))
+})
+
 </script>
 
 <template>
@@ -47,13 +50,13 @@ const isMinimal = computed(() => minimalRoutes.includes(route.path))
 
 <style>
 #app {
-  min-height: 100vh;          /* okvir: barem visina ekrana */
+  min-height: 100vh;     
   display: flex;
   flex-direction: column;
 }
 
 .page {
-  flex: 1;                    /* stranica popunjava prostor između Men/Nav/Footer */
+  flex: 1;             
   display: flex;
   flex-direction: column;
 }

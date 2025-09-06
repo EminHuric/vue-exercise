@@ -8,6 +8,7 @@ import Gw from '../views/Gw.vue'
 import Favorite from '../views/Favorite.vue'
 import Fp from '../views/forgotpassword.vue'
 import Ac from '../views/createAcc.vue'
+import ProductDetail from '../views/ProductDetail.vue'
 
 
 const routes = [
@@ -18,6 +19,7 @@ const routes = [
   { path: '/gw', name:'Gw', component: Gw},
   { path: '/forgot-password', name:'Fp', component: Fp},
   { path: '/create-acc', name:'Ac', component: Ac},
+  { path: '/product/:id', component: ProductDetail },
   { path: '/favorite', name: 'Favorite', component: Favorite }
 ]
 

@@ -346,7 +346,7 @@ onMounted(() => {
     height: 150vh !important;
   }
   .partners {
-    margin-top: -250px !important;
+    margin-top: 80px !important;
   }
   #sf {
     margin-left: -180% !important;
@@ -459,7 +459,7 @@ onMounted(() => {
     height: 170vh !important;
   }
   .partners {
-    margin-top: -250px !important;
+    margin-top: 80px !important;
   }
   #sf {
     margin-left: -180% !important;
@@ -547,11 +547,14 @@ onMounted(() => {
 
 }
 @media (max-width: 420px) {
+  .sub {
+    margin-top: 20% !important;
+  }
   .page {
-    height: 170vh !important;
+    height: 100vh !important;
   }
   .partners {
-    margin-top: -250px !important;
+    margin-top: 80px !important;
   }
   #sh {
     margin-left: -120% !important;
