@@ -1,3 +1,1 @@
-
-
-https://vue-emin.vercel.app
+https://eminhuric.vercel.app
